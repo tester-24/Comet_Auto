@@ -61,7 +61,7 @@ it('Comet_Jainam', () => {
 
     // //Click on Download Button
     cy.get('.btn')
-    cy.wait(4000)
+    cy.wait(6000)
 
     // 3) year 2021-2022
     cy.get('.k-icon').type("{downArrow}{downArrow}{Enter}")

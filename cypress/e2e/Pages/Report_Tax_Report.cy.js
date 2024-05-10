@@ -80,7 +80,7 @@ it('Comet_Jainam', () => {
 
     //Selecting A Segment - CURRENCY 
      cy.get('.ng-submitted > :nth-child(2) > :nth-child(1)').click({ force: true })
-    .type("{downArrow}{Enter}")
+    .type("{downArrow}{downArrow}{Enter}")
      cy.wait(4000)
 
 
