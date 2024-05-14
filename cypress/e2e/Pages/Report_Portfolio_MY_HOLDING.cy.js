@@ -51,11 +51,11 @@ it('Comet_Jainam', () => {
 
     //Click on Submit Button
     cy.get('form.ng-pristine > :nth-child(2) > :nth-child(2) > .btn').click()
-    cy.wait(7000)
+    cy.wait(15000)
 
-    // //Download File
-    // cy.get('[data-target="#DownloadModal"]').click()
-    // cy.wait(7000)
+    // Grid 
+    //cy.get('.mb-4 > .k-grid').click()
+    //cy.wait(9000)
 
     //Click on Download File
     cy.get('[title="Download Report"] > img').click()
@@ -63,20 +63,20 @@ it('Comet_Jainam', () => {
 
     //Click on Download Button
     cy.get('#DownloadModal > .modal-dialog > .modal-content > .modal-footer > :nth-child(1)').click()
-    cy.wait(3000)
+    cy.wait(5000)
 
     //Click on CLOSE Button
     cy.get('#DownloadModal > .modal-dialog > .modal-content > .modal-header > .btn-close').click()
     cy.wait(3000)
 
     //Click on My Position
-    cy.get('.segment').type("{downArrow}{downArrow}{Enter}")
+    //cy.get('.segment').type("{downArrow}{downArrow}{Enter}")
     //.type("{downArrow}{downArrow}{Enter}")
-    cy.wait(4000)
+    //cy.wait(4000)
 
     // //Click on SUBMIT Button
-    cy.get('form.ng-touched > :nth-child(2) > :nth-child(2)').click()
-    cy.wait(4000)
+    //cy.get('form.ng-touched > :nth-child(2) > :nth-child(2)').click()
+    //cy.wait(4000)
 
 
 

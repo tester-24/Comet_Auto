@@ -45,14 +45,15 @@ it('Comet_Jainam', () => {
   cy.wait(3000)
 
   cy.get('.k-input-value-text').click()
-  .type("{downArrow}{downArrow}{Enter}")
+  .type("{downArrow}{downArrow}{downArrow}{Enter}")
   cy.wait(3000)
    
 
   //Click on Submit Button
-  //cy.get('.col-md-3 > .btn').click()
-  cy.get('.col-md-3 > .btn', { timeout: 2_000 }).click()
+  cy.get('.col-md-3 > .btn').click()
+  cy.wait(5000)
   
+
  
    
 })

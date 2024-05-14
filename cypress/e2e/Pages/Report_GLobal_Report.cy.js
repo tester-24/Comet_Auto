@@ -52,13 +52,12 @@ cy.wait(3000);
         .type("{downArrow}{Enter}")
     cy.wait(3000)
 
-    //From Date
-    cy.get('form.ng-valid > :nth-child(2) > :nth-child(4)').click()
+    //Select From Date - Calendar
+
+    cy.get('#datepicker-1').clear()
+    cy.get('#datepicker-1').type('1/4/2024')
     cy.wait(3000)
 
-    // // //To Date 
-    // // cy.get(':nth-child(4) > .form-group').click()
-    // // cy.wait(3000)
 
     //Download Type
     cy.get(':nth-child(5) > .form-group').click()
@@ -70,26 +69,24 @@ cy.wait(3000);
     cy.wait(9000)
 
 
-
-
     //Selecting DERIVATIVE 
-    cy.get('.container > form.ng-valid > :nth-child(2) > :nth-child(1)')
-    .type("{downArrow}{Enter}").click({ force: true })
+  cy.get('.container > form.ng-valid > :nth-child(2) > :nth-child(1)')
+  .type("{downArrow}{Enter}").click({ force: true })
 
-    //Download By
-    cy.get(':nth-child(2) > .form-group').click()
-        .type("{downArrow}{Enter}")
-    cy.wait(3000)
+  //Download By
+  cy.get(':nth-child(2) > .form-group').click()
+      .type("{downArrow}{Enter}")
+  cy.wait(3000)
 
-    //Download Type
-    cy.get(':nth-child(5) > .form-group').click()
-        .type("{downArrow}{Enter}")
-    cy.wait(2000)
+  //Select From Date - Calendar
 
-    //Download 
-    cy.get('.col-lg-2 > .btn').click()
-    cy.wait(2000)
+  cy.get('#datepicker-1').clear()
+  cy.get('#datepicker-1').type('1/4/2024')
+  cy.wait(3000)
 
-   
 
+
+
+
+    
 })

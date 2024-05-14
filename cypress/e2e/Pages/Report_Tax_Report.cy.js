@@ -35,130 +35,30 @@ it('Comet_Jainam', () => {
     
     cy.wait(4000)
 
-     // 5) Tax P&L
+     // 5) Tax P&L - Selecting - Equity
     cy.get('#ReportDropdown').click()
     cy.get('[href="#/tax"]').click()
      cy.wait(4000)
 
-    // Click on View 
-    cy.get('.btn').click()
-    cy.wait(9000)
-
-    //Select Segment - NSE_FNO
-    cy.get('.ng-submitted > :nth-child(2) > :nth-child(1)') .click({ force: true })
-    .type("{downArrow}{Enter}")
-    cy.wait(4000)
-
-    //Select FY Year
-    cy.get('.ng-submitted > :nth-child(2) > :nth-child(2)').click()
-    .type("{downArrow}{Enter}")
-    cy.wait(4000)
-    
-    // Click on DOWNLOAD 
-    cy.get('.btn').click()
-    cy.wait(5000)
-
-    //Select FY Year
-    cy.get('.ng-submitted > :nth-child(2) > :nth-child(2)').click()
-    .type("{downArrow}{downArrow}{Enter}")
-    cy.wait(4000)
-
-   // Click on DOWNLOAD 
-   cy.get('.btn').click()
-   cy.wait(3000)
-
-   //Select FY Year
-   cy.get('.ng-submitted > :nth-child(2) > :nth-child(2)').click({ force: true })
-   .type("{downArrow}{downArrow}{downArrow}{Enter}")
-   cy.wait(4000)
-
-  // Click on DOWNLOAD 
-  cy.get('.btn').click()
-  cy.wait(9000)
-
-
-
-    //Selecting A Segment - CURRENCY 
-     cy.get('.ng-submitted > :nth-child(2) > :nth-child(1)').click({ force: true })
-    .type("{downArrow}{downArrow}{Enter}")
-     cy.wait(4000)
-
-
-   //Select FY Year
-   cy.get('.ng-submitted > :nth-child(2) > :nth-child(2)').click()
-   .type("{upArrow}{upArrow}{upArrow}{upArrow}{Enter}")
-   cy.wait(4000)
-
-     // Click on DOWNLOAD 
-    cy.get('.btn').click()
-    cy.wait(3000)
-
-
-    //Select FY Year
-   cy.get('.ng-submitted > :nth-child(2) > :nth-child(2)').click()
-   .type("{downArrow}{downArrow}{downArrow}{Enter}")
-   cy.wait(6000)
-
-
-    // Click on DOWNLOAD 
-    cy.get('.btn').click()
-    cy.wait(5000)
-
-    //Select FY Year
-   cy.get('.ng-submitted > :nth-child(2) > :nth-child(2)').click({ force: true })
-   .type("{upArrow}{upArrow}{upArrow}{Enter}")
-   cy.wait(4000)
-
-     // Click on DOWNLOAD 
-    cy.get('.btn').click()
-    cy.wait(3000)
-
-
-
-     //Selecting A Segment - MCX 
-     cy.get('.ng-submitted > :nth-child(2) > :nth-child(1)').click()
-    .type("{downArrow}{downArrow}{Enter}")
-     cy.wait(4000)
-
-
      //Select FY Year
-     cy.get('.ng-submitted > :nth-child(2) > :nth-child(2)').click()
-     .type("{upArrow}{upArrow}{upArrow}{Enter}")
+     cy.get('span.k-input-value-text').eq(1).click({ force: true })
+     .type("{downArrow}{Enter}")
      cy.wait(4000)
 
-     // Click on DOWNLOAD 
+     //Click on view
      cy.get('.btn').click()
-     cy.wait(3000)
+     cy.wait(8000)
 
 
-      //Select FY Year
-   cy.get('.ng-submitted > :nth-child(2) > :nth-child(2)').click({ force: true })
-   .type("{downArrow}{downArrow}{downArrow}{Enter}")
-   cy.wait(4000)
+     //Selecting Segmet - NSE_FNO
+     cy.get('span.k-input-value-text').eq(0).click({ force: true })
+     //.type("{downArrow}{Enter}")
+     cy.wait(5000)
 
-
-    // Click on DOWNLOAD 
-    cy.get('.btn').click()
-    cy.wait(3000)
-
-
-     //Select FY Year
-    cy.get('.ng-submitted > :nth-child(2) > :nth-child(2)').click()
-   .type("{downArrow}{Enter}")
-    cy.wait(4000)
-
-
-    // Click on DOWNLOAD 
-    cy.get('.btn').click()
-    cy.wait(3000)
-     
-
-     //Select FY Year
-     cy.get('.ng-submitted > :nth-child(2) > :nth-child(2)').click()
-     .type("{upArrow}{upArrow}{Enter}")
+     //Click on View 
+     cy.get('.btn').click()
      cy.wait(4000)
 
-     // Click on DOWNLOAD 
-     cy.get('.btn').click()
-     cy.wait(3000)
+     cy.get('a.download-summary-btn').eq(0).click()
+     cy.wait(4000)
 })
