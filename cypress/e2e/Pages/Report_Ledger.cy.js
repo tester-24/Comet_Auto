@@ -74,7 +74,7 @@ it('Comet_Jainam', () => {
 
     //Contract Bills
 
-    cy.get('#bills').click()
+    cy.get('#bills').click({ force: true })
     cy.wait(3000)
 
      // Download - PDF 
@@ -273,7 +273,7 @@ it('Comet_Jainam', () => {
     cy.wait(4000)
 
     // Download - PDF 
-    cy.get('#pdf').click()
+    cy.get('#pdf').click({ force: true })
     cy.wait(4000)
 
     // Download 

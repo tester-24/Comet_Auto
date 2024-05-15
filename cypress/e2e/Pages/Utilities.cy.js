@@ -70,9 +70,19 @@ it('Comet_Jainam', () => {
     cy.wait(3000)
 
     //Click on PLEASE SELECT 
-    cy.wait(3000)
-    cy.get('.col-lg-5 > .form-control')
-    cy.select()
-    
+    cy.get('select.form-control')
+cy.get('select.custom-select')
+cy.get('div.d-flex select')
+cy.get('div.flex-wrap select')
+cy.get('div.align-items-center select')
+cy.get('div.heading-text select')
+cy.get('div.d-block select')
+cy.get('div.d-md-flex select')
+cy.get('div.d-lg-flex select')
+cy.get('div.d-xl-flex select')
+cy.get('div.justify-content-between select')
+cy.get('div.row select')
+
+
     
 })

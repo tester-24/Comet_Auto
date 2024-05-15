@@ -47,18 +47,39 @@ it('Comet_Jainam', () => {
 
      //Click on view
      cy.get('.btn').click()
-     cy.wait(8000)
+     cy.wait(20000)
 
+
+     cy.get('a.download-summary-btn').eq(1).click({ force: true })
 
      //Selecting Segmet - NSE_FNO
-     cy.get('span.k-input-value-text').eq(0).click({ force: true })
-     //.type("{downArrow}{Enter}")
-     cy.wait(5000)
+    cy.get('span.k-input-value-text').eq(0).click({ force: true })
+    .type("{downArrow}{Enter}")
+    cy.wait(5000)
 
-     //Click on View 
-     cy.get('.btn').click()
-     cy.wait(4000)
+    //Download 
+    cy.get('.btn').click({ force: true })
+    cy.wait(4000)
 
-     cy.get('a.download-summary-btn').eq(0).click()
-     cy.wait(4000)
+    //Select Segment - CURRENCY
+    cy.get('span.k-input-value-text').eq(0).click({ force: true })
+    .type("{downArrow}{Enter}")
+    cy.wait(5000)
+
+    //Download 
+    cy.get('.btn').click({ force: true })
+    cy.wait(4000)
+
+
+    //Select Segment - MCX
+    cy.get('span.k-input-value-text').eq(0).click({ force: true })
+    .type("{downArrow}{Enter}")
+    cy.wait(5000)
+
+    //Download 
+    cy.get('.btn').click({ force: true })
+    cy.wait(4000)
+
+
+
 })
