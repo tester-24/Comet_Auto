@@ -27,14 +27,13 @@ it('Comet_Jainam', () => {
   cy.wait(3000);
    
    //cy.get('.continue_button_wrap > p').click()
-   cy.wait(3000)
+   cy.wait(8000)
 
   //Click on Partner
-  cy.get('#PartnerDropdown').click()
+  cy.get('#PartnerDropdown').click({ force: true })
   cy.wait(3000)
 
-  // tag: smoke
-
+  
   //Click on Collection
   cy.get('[href="#/collection"]').click()
   cy.wait(3000)

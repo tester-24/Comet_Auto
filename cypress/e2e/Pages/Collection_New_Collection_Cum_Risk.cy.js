@@ -27,10 +27,10 @@ it('Comet_Jainam', () => {
   cy.wait(3000);
    
    //cy.get('.continue_button_wrap > p').click()
-   cy.wait(3000)
+   cy.wait(5000)
 
   //Click on Partner
-  cy.get('#PartnerDropdown').click()
+  cy.get('#PartnerDropdown').click({ force: true })
   cy.wait(3000)
 
   // tag: smoke
@@ -51,8 +51,8 @@ it('Comet_Jainam', () => {
 
   //Click on Submit Button
   //cy.get('.col-md-3 > .btn').click()
-  cy.get('.col-md-3 > .btn', { timeout: 2_000 }).click()
-  
+  cy.get('.col-md-3 > .btn').click()
+  cy.wait(3000)
  
    
 })

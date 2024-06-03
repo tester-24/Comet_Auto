@@ -17,17 +17,30 @@ it('Comet_Jainam', () => {
     cy.get('.form_wrap').click()
     cy.wait(2000)
 
-    //Enter Pin
-    cy.wait(1000);
-    cy.get('[formcontrolname="otp1"]').type('0')
-    cy.get('[formcontrolname="otp2"]').type('0')
-    cy.get('[formcontrolname="otp3"]').type('0')
-    cy.get('[formcontrolname="otp4"]').type('0')
-    cy.wait(4000)
+    // //Enter Pin
+    // cy.wait(1000);
+    // cy.get('[formcontrolname="otp1"]').type('0')
+    // cy.get('[formcontrolname="otp2"]').type('0')
+    // cy.get('[formcontrolname="otp3"]').type('0')
+    // cy.get('[formcontrolname="otp4"]').type('0')
+    // cy.wait(4000)
 
-    //Click on form
-    cy.get('#AddNomineeDetail > .modal-dialog > .modal-content > .modal-body > .close').click({ force: true })
-    cy.wait(4000);
+
+    //Enter Pin
+  cy.wait(1000);
+  cy.get('[formcontrolname="otp1"]').type('1');
+  cy.get('[formcontrolname="otp2"]').type('2');
+  cy.get('[formcontrolname="otp3"]').type('3');
+  cy.get('[formcontrolname="otp4"]').type('4');
+  cy.wait(3000);
+   
+   //cy.get('.continue_button_wrap > p').click()
+   cy.wait(3000)
+
+
+    // //Click on form
+    // cy.get('#AddNomineeDetail > .modal-dialog > .modal-content > .modal-body > .close').click({ force: true })
+    // cy.wait(4000);
 
     // click on Reports
     cy.get('#ReportDropdown').click()
@@ -45,12 +58,16 @@ it('Comet_Jainam', () => {
      .type("{downArrow}{Enter}")
      cy.wait(4000)
 
+    //  cy.get('.segment.ng-star-inserted > .ng-untouched').type('WA603')
+    //  cy.wait(3000)
+
      //Click on view
      cy.get('.btn').click()
      cy.wait(20000)
 
 
-     cy.get('a.download-summary-btn').eq(1).click({ force: true })
+     cy.get('i.fa-cloud-download').eq(0).click({ force: true })
+     cy.wait(4000)
 
      //Selecting Segmet - NSE_FNO
     cy.get('span.k-input-value-text').eq(0).click({ force: true })
@@ -62,7 +79,7 @@ it('Comet_Jainam', () => {
     cy.wait(4000)
 
     //Select Segment - CURRENCY
-    cy.get('span.k-input-value-text').eq(0).click({ force: true })
+    cy.get('span.k-input-inner').eq(0).click({ force: true })
     .type("{downArrow}{Enter}")
     cy.wait(5000)
 

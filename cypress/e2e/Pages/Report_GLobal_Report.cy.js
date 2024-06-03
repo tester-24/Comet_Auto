@@ -18,20 +18,43 @@ cy.wait(3000);
 cy.get('.form_wrap').click();
 cy.wait(2000);
 
+// //Enter Pin
+// cy.wait(1000);
+// cy.get('[formcontrolname="otp1"]').type('0');
+// cy.get('[formcontrolname="otp2"]').type('0');
+// cy.get('[formcontrolname="otp3"]').type('0');
+// cy.get('[formcontrolname="otp4"]').type('0');
+// cy.wait(3000);
+
+
+
+
+// //Enter Pin
+// cy.wait(1000);
+// cy.get('[formcontrolname="otp1"]').type('1');
+// cy.get('[formcontrolname="otp2"]').type('2');
+// cy.get('[formcontrolname="otp3"]').type('3');
+// cy.get('[formcontrolname="otp4"]').type('4');
+// cy.wait(3000);
+ 
+
 //Enter Pin
 cy.wait(1000);
-cy.get('[formcontrolname="otp1"]').type('0');
-cy.get('[formcontrolname="otp2"]').type('0');
-cy.get('[formcontrolname="otp3"]').type('0');
-cy.get('[formcontrolname="otp4"]').type('0');
+cy.get('[formcontrolname="otp1"]').type('1');
+cy.get('[formcontrolname="otp2"]').type('2');
+cy.get('[formcontrolname="otp3"]').type('3');
+cy.get('[formcontrolname="otp4"]').type('4');
 cy.wait(3000);
+ 
+ //cy.get('.continue_button_wrap > p').click()
+ cy.wait(3000)
+ //cy.get('.continue_button_wrap > p').click()
+ cy.wait(3000)
 
-//cy.get('.continue_button_wrap > p').click();
-cy.wait(3000);
 
-//Click on form
-cy.get('#AddNomineeDetail > .modal-dialog > .modal-content > .modal-body > .close').click({ force: true })
-cy.wait(3000);
+// //Click on form
+// cy.get('#AddNomineeDetail > .modal-dialog > .modal-content > .modal-body > .close').click({ force: true })
+// cy.wait(3000);
 
     // click on Reports
     cy.get('#ReportDropdown').click({ force: true })
@@ -44,8 +67,8 @@ cy.wait(3000);
     // cy.wait(3000)
 
     //Selecting EQUITY
-    cy.get('.container > form.ng-valid > :nth-child(2) > :nth-child(1)').click()
-    cy.wait(5000)
+    // cy.get('li[aria-selected="true"] span').click({ force: true })
+    // cy.wait(5000)
     
     //Click on DOWNLOAD BY 
     cy.get(':nth-child(2) > .form-group').click()
@@ -64,25 +87,35 @@ cy.wait(3000);
         .type("{downArrow}{Enter}")
     cy.wait(2000)
 
+    // //Enter Code
+   
+    // cy.get('.form-control').type('WA603')
+    // cy.wait(3000)
+
+    //Download Type
+    cy.get('kendo-dropdownlist[name="downloadType"] span').eq(0).click({ force: true })
+    cy.wait(3000)
+
+
     //Download 
     cy.get('.col-lg-2 > .btn').click()
     cy.wait(9000)
 
 
-    //Selecting DERIVATIVE 
-  cy.get('.container > form.ng-valid > :nth-child(2) > :nth-child(1)')
-  .type("{downArrow}{Enter}").click({ force: true })
+//     //Selecting DERIVATIVE 
+//   cy.get('.container > form.ng-valid > :nth-child(2) > :nth-child(1)').click({ force: true })
+//   .type("{downArrow}{Enter}")
 
-  //Download By
-  cy.get(':nth-child(2) > .form-group').click()
-      .type("{downArrow}{Enter}")
-  cy.wait(3000)
+//   //Download By
+//   cy.get(':nth-child(2) > .form-group').click()
+//       .type("{downArrow}{Enter}")
+//   cy.wait(3000)
 
-  //Select From Date - Calendar
+//   //Select From Date - Calendar
 
-  cy.get('#datepicker-1').clear()
-  cy.get('#datepicker-1').type('1/4/2024')
-  cy.wait(3000)
+//   cy.get('#datepicker-1').clear()
+//   cy.get('#datepicker-1').type('1/4/2024')
+//   cy.wait(3000)
 
 
 

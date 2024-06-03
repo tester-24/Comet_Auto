@@ -26,10 +26,10 @@ it('Comet_Jainam', () => {
   cy.wait(3000);
    
    //cy.get('.continue_button_wrap > p').click()
-   cy.wait(3000)
+   cy.wait(5000)
 
   //Click on PARTNERS
-  cy.get('#PartnerDropdown').click()
+  cy.get('#PartnerDropdown').click({ force: true })
   cy.wait(3000)
 
   //Click on Collection
@@ -49,12 +49,6 @@ it('Comet_Jainam', () => {
   //Click On Submit Button
   cy.get('.mt-1 > .btn').click()
   cy.wait(7000)
-
-
-  //Click on Calendar
-  cy.get('.collection_date_picker > .k-input-button')
-
-  
 
   //Download Excel
   //.cy.get('.btn > .ng-star-inserted').click()

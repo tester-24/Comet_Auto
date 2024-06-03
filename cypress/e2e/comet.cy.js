@@ -20,10 +20,10 @@ it('Comet_Jainam', () => {
     
    //Enter Pin
    cy.wait(1000);
-   cy.get('[formcontrolname="otp1"]').type('0');
-   cy.get('[formcontrolname="otp2"]').type('0');
-   cy.get('[formcontrolname="otp3"]').type('0');
-   cy.get('[formcontrolname="otp4"]').type('0');
+   cy.get('[formcontrolname="otp1"]').type('1');
+   cy.get('[formcontrolname="otp2"]').type('2');
+   cy.get('[formcontrolname="otp3"]').type('3');
+   cy.get('[formcontrolname="otp4"]').type('4');
    cy.wait(3000);
 
  
@@ -31,9 +31,9 @@ it('Comet_Jainam', () => {
   cy.wait(4000)
 
   
-   //Click on form
-   cy.get('#AddNomineeDetail > .modal-dialog > .modal-content > .modal-body > .close').click({ force: true })
-   cy.wait(3000);
+//    //Click on form
+//    cy.get('#AddNomineeDetail > .modal-dialog > .modal-content > .modal-body > .close').click({ force: true })
+//    cy.wait(3000);
  
 
     // Click on LAS

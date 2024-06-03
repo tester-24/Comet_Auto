@@ -17,20 +17,32 @@ it('Comet_Jainam', () => {
     cy.get('.form_wrap').click()
     cy.wait(2000)
 
-    //Enter Pin
-    cy.wait(1000);
-    cy.get('[formcontrolname="otp1"]').type('0')
-    cy.get('[formcontrolname="otp2"]').type('0')
-    cy.get('[formcontrolname="otp3"]').type('0')
-    cy.get('[formcontrolname="otp4"]').type('0')
-    // cy.get('.six_digit_pin_wrap').invoke('val').then((otp) => {
-    //     // 0000
-    // });
-    cy.wait(4000)
+    // //Enter Pin
+    // cy.wait(1000);
+    // cy.get('[formcontrolname="otp1"]').type('0')
+    // cy.get('[formcontrolname="otp2"]').type('0')
+    // cy.get('[formcontrolname="otp3"]').type('0')
+    // cy.get('[formcontrolname="otp4"]').type('0')
+    // // cy.get('.six_digit_pin_wrap').invoke('val').then((otp) => {
+    // //     // 0000
+    // // });
+    // cy.wait(4000)
 
-   //Click on form
-   cy.get('#AddNomineeDetail > .modal-dialog > .modal-content > .modal-body > .close').click({ force: true })
-   cy.wait(4000);
+
+    //Enter Pin
+  cy.wait(1000);
+  cy.get('[formcontrolname="otp1"]').type('1');
+  cy.get('[formcontrolname="otp2"]').type('2');
+  cy.get('[formcontrolname="otp3"]').type('3');
+  cy.get('[formcontrolname="otp4"]').type('4');
+  cy.wait(3000);
+   
+   //cy.get('.continue_button_wrap > p').click()
+   cy.wait(3000)
+
+//    //Click on form
+//    cy.get('#AddNomineeDetail > .modal-dialog > .modal-content > .modal-body > .close').click({ force: true })
+//    cy.wait(4000);
 
 
     // click on Reports
@@ -46,27 +58,25 @@ it('Comet_Jainam', () => {
 
 
     //Click on My Holding
-    cy.get('.segment').click()
-    cy.wait(4000)
+    cy.get('span.k-input-value-text').eq(0)
+    cy.get('span.k-input-inner span').eq(0)
+    cy.get('kendo-dropdownlist[name="CategoryName"] span').eq(1)
+     cy.wait(10000)
 
     //Click on Submit Button
-    cy.get('form.ng-pristine > :nth-child(2) > :nth-child(2) > .btn').click()
-    cy.wait(15000)
-
-    // Grid 
-    //cy.get('.mb-4 > .k-grid').click()
-    //cy.wait(9000)
+    cy.get('.d-flex > .btn').click({ force: true })
+    cy.wait(30000)
 
     //Click on Download File
-    cy.get('[title="Download Report"] > img').click()
-    cy.wait(4000)
+    cy.get('[title="Download Report"] > img').click({ force: true })
+    cy.wait(10000)
 
     //Click on Download Button
-    cy.get('#DownloadModal > .modal-dialog > .modal-content > .modal-footer > :nth-child(1)').click()
+    cy.get('#DownloadModal > .modal-dialog > .modal-content > .modal-footer > :nth-child(1)').click({ force: true })
     cy.wait(5000)
 
     //Click on CLOSE Button
-    cy.get('#DownloadModal > .modal-dialog > .modal-content > .modal-header > .btn-close').click()
+    cy.get('#DownloadModal > .modal-dialog > .modal-content > .modal-header > .btn-close').click({ force: true })
     cy.wait(3000)
 
     //Click on My Position

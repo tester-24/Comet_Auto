@@ -27,10 +27,10 @@ it('Comet_Jainam', () => {
   cy.wait(3000);
    
    //cy.get('.continue_button_wrap > p').click()
-   cy.wait(3000)
+   cy.wait(5000)
 
   //Click on Partner
-  cy.get('#PartnerDropdown').click()
+  cy.get('#PartnerDropdown').click({ force: true })
   cy.wait(3000)
 
   // tag: smoke
@@ -45,13 +45,13 @@ it('Comet_Jainam', () => {
   cy.wait(3000)
 
   cy.get('.k-input-value-text').click()
-  .type("{downArrow}{downArrow}{downArrow}{Enter}")
+  .type("{downArrow}{downArrow}{downArrow}{downArrow}{downArrow}{downArrow}{Enter}")
   cy.wait(3000)
    
 
   //Click on Submit Button
   cy.get('.col-md-3 > .btn').click()
-  cy.wait(5000)
+  cy.wait(4000)
   
 
  
