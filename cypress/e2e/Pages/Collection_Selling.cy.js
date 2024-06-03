@@ -8,7 +8,7 @@ it('Comet_Jainam', () => {
     cy.wait(3000)
     cy.get('.login-space-btn').click()
 
-    loginPage.enterUsername()
+    loginPage.enterUsername
     loginPage.enterPassword()
     loginPage.clickLogin()
     cy.wait(3000)

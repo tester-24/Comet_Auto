@@ -51,7 +51,7 @@ it('Comet_Jainam', () => {
 
   //Click on Submit Button
   cy.get('.col-md-3 > .btn').click()
-  cy.wait(4000)
+cy.wait(4000)
   
 
  
