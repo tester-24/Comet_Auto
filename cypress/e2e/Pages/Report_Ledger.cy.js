@@ -90,12 +90,12 @@ it('Comet_Jainam', () => {
     //2.)SELECT- EQUITY 
     cy.get('span.k-input-value-text').eq(0).click({ force: true })
     //.type("{downArrow}{Enter}")
-    cy.wait(4000)
+    cy.wait(5000)
 
 
     cy.get('kendo-dropdownlist[name="calendar"] span').eq(1).click({ force: true })
-    .type("{downArrow}{downArrow}{downArrow}{Enter}")
-    cy.wait(4000)
+    //.type("{downArrow}{downArrow}{downArrow}{Enter}")
+    cy.wait(6000)
 
     //  //Enter Code
     //  cy.get('.segment2 > .w-100').clear()
@@ -144,13 +144,13 @@ it('Comet_Jainam', () => {
 
     //3.) SELECT - FUTURE_OPTION
     cy.get('span.k-input-value-text').eq(0).click({ force: true })
-    .type("{downArrow}{Enter}")
+    //.type("{downArrow}{Enter}")
     cy.wait(3000)
 
 
     // Selecting FINANCIAL YEAR.
     cy.get('kendo-dropdownlist[name="calendar"] span').eq(1).click({ force: true })
-    .type("{downArrow}{downArrow}{downArrow}{Enter}")
+    //.type("{downArrow}{downArrow}{downArrow}{Enter}")
     cy.wait(4000)
 
 
@@ -215,12 +215,12 @@ it('Comet_Jainam', () => {
 
     //Click on view 
     cy.get('.mt-2 > .btn').click({ force: true })
-    cy.wait(5000)
+    cy.wait(8000)
 
 
     //Ledger 
     //Downloads
-    cy.get('.btn > img').click({ force: true })
+    cy.get('.text-end > .btn').click({ force: true })
     cy.wait(8000)
 
     // Send Email 
@@ -252,8 +252,8 @@ it('Comet_Jainam', () => {
 
     //5.) SELECT - COMMODITY 
 
-    cy.get('span.k-input-value-text').eq(0).click()
-    .type("{downArrow}{Enter}")
+    cy.get('span.k-input-value-text').eq(0).click({ force: true })
+    //.type("{downArrow}{Enter}")
     cy.wait(3000)
 
 
@@ -274,7 +274,7 @@ it('Comet_Jainam', () => {
 
     //Ledger 
     //Downloads
-    cy.get('.btn > img').click()
+    cy.get('.btn > img').click({ force: true })
     cy.wait(4000)
 
     // Send Email 
@@ -287,7 +287,7 @@ it('Comet_Jainam', () => {
 
     //Contract Bills
 
-    cy.get('#bills').click()
+    cy.get('#bills').click({ force: true })
     cy.wait(3000)
 
      // Download - PDF 

@@ -8,7 +8,7 @@ it('Comet_Jainam', () => {
     cy.wait(3000)
     cy.get('.login-space-btn').click()
 
-    loginPage.enterUsername
+    loginPage.enterUsername()
     loginPage.enterPassword()
     loginPage.clickLogin()
     cy.wait(3000)
@@ -17,7 +17,6 @@ it('Comet_Jainam', () => {
     cy.get('.form_wrap').click()
     cy.wait(2000)
  
-    
   //Enter Pin
   cy.wait(1000);
   cy.get('[formcontrolname="otp1"]').type('1');
@@ -25,6 +24,7 @@ it('Comet_Jainam', () => {
   cy.get('[formcontrolname="otp3"]').type('3');
   cy.get('[formcontrolname="otp4"]').type('4');
   cy.wait(3000);
+   
    
    //cy.get('.continue_button_wrap > p').click()
    cy.wait(8000)

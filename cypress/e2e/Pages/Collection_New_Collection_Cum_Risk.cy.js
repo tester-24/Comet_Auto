@@ -17,7 +17,6 @@ it('Comet_Jainam', () => {
     cy.get('.form_wrap').click()
     cy.wait(2000)
  
-    
   //Enter Pin
   cy.wait(1000);
   cy.get('[formcontrolname="otp1"]').type('1');
@@ -26,8 +25,9 @@ it('Comet_Jainam', () => {
   cy.get('[formcontrolname="otp4"]').type('4');
   cy.wait(3000);
    
+   
    //cy.get('.continue_button_wrap > p').click()
-   cy.wait(5000)
+   cy.wait(6000)
 
   //Click on Partner
   cy.get('#PartnerDropdown').click({ force: true })

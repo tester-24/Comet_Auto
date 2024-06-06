@@ -49,7 +49,7 @@ cy.wait(3000);
  //cy.get('.continue_button_wrap > p').click()
  cy.wait(3000)
  //cy.get('.continue_button_wrap > p').click()
- cy.wait(3000)
+ cy.wait(5000)
 
 
 // //Click on form
