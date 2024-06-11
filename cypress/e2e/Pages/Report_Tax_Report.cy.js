@@ -80,7 +80,7 @@ it('Comet_Jainam', () => {
 
     //Select Segment - CURRENCY
     cy.get('span.k-input-inner').eq(0).click({ force: true })
-    .type("{downArrow}{Enter}")
+    //.type("{downArrow}{Enter}")
     cy.wait(5000)
 
     //Download 
@@ -90,7 +90,7 @@ it('Comet_Jainam', () => {
 
     //Select Segment - MCX
     cy.get('span.k-input-value-text').eq(0).click({ force: true })
-    .type("{downArrow}{Enter}")
+    // .type("{downArrow}{Enter}")
     cy.wait(5000)
 
     //Download 

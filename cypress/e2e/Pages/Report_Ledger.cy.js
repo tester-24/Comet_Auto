@@ -53,10 +53,11 @@ it('Comet_Jainam', () => {
 
     //Click on view 
     cy.get('.mt-2 > .btn').click({ force: true })
-    cy.wait(35000)
+    cy.wait(40000)
 
     //Downloads
     cy.get('img[src="../../../../assets/image/ledger_download.png"]').click({ force: true })
+    //cy.get('.text-end > .btn').click({ force: true })
     cy.wait(5000)
 
     // Send Email 
@@ -199,7 +200,7 @@ it('Comet_Jainam', () => {
    //4.) SELECT - CURRENCY 
 
    cy.get('span.k-input-value-text').eq(0).click({ force: true })
-    .type("{downArrow}{Enter}")
+    //.type("{downArrow}{Enter}")
     cy.wait(3000)
 
 
@@ -275,10 +276,10 @@ it('Comet_Jainam', () => {
     //Ledger 
     //Downloads
     cy.get('.btn > img').click({ force: true })
-    cy.wait(4000)
+    cy.wait(6000)
 
     // Send Email 
-    cy.get('.modal-footer > :nth-child(1)').click()
+    cy.get('.modal-footer > :nth-child(1)').click({ force: true })
     cy.wait(4000)
 
     // // Download - PDF 
