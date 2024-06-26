@@ -50,8 +50,26 @@ it('Comet_Jainam', () => {
 
   //Click on Submit Button
   cy.get('.col-md-3 > .btn').click()
-  cy.wait(5000)
+  cy.wait(20000)
   
+  if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))
+    {
+      cy.log('data found')
+      // downloading Excel File
+      cy.wait(5000) 
+      
+       //Download Excel
+        // cy.get('.btn > .ng-star-inserted').click({ force: true })
+        // cy.wait(3000)
+ 
+    }
+    else
+    {
+      cy.log('No data found')
+    }
+   // Scrolling to top
+     cy.wait(2000)
+     cy.scrollTo('top')
 
  
    

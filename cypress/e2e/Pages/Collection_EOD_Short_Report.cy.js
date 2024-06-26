@@ -26,10 +26,10 @@ it('Comet_Jainam', () => {
   cy.wait(3000);
    
    //cy.get('.continue_button_wrap > p').click()
-   cy.wait(5000)
+   cy.wait(3000)
 
   //Click on PARTNERS
-  cy.get('#PartnerDropdown').click({ force: true })
+  cy.get('#PartnerDropdown').click()
   cy.wait(3000)
 
   //Click on Collection
@@ -49,6 +49,29 @@ it('Comet_Jainam', () => {
   //Click On Submit Button
   cy.get('.mt-1 > .btn').click()
   cy.wait(7000)
+
+
+  //Click on Calendar
+  cy.get('.collection_date_picker > .k-input-button')
+
+  cy.wait(3000)
+  if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))
+      {
+        cy.log('data found')
+        // downloading Excel File 
+        
+         //Download Excel
+          // cy.get('.btn > .ng-star-inserted').click()
+          // cy.wait(3000)
+   
+      }
+      else
+      {
+        cy.log('No data found')
+      }
+     // Scrolling to top
+       cy.wait(2000)
+       cy.scrollTo('top')
 
   //Download Excel
   //.cy.get('.btn > .ng-star-inserted').click()

@@ -61,7 +61,6 @@
     "core-util-is": "^1.0.3",
     "cron": "^2.4.3",
     "cross-spawn": "^7.0.3",
-    "cypress": "^13.8.1",
     "cypress-mochawesome-reporter": "^3.8.2",
     "cypress-xpath": "^2.0.1",
     "dashdash": "^1.14.1",
@@ -292,6 +291,7 @@
     "yocto-queue": "^0.1.0"
   },
   "devDependencies": {
+    "cypress": "^13.12.0",
     "mocha": "^10.3.0"
   },
   "scripts": {

@@ -67,27 +67,88 @@ it('Comet_Jainam', () => {
     cy.get('.d-flex > .btn').click({ force: true })
     cy.wait(30000)
 
-    //Click on Download File
-    cy.get('[title="Download Report"] > img').click({ force: true })
-    cy.wait(10000)
+    //cy.wait(3000)
+    if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))
+        {
+          cy.log('data found')
+          // downloading Excel File 
+          
+        //   cy.get('[src="../../../../assets/image/icon/excel.png"]').click()
+        //   cy.wait(2000)
+        //   // Downloading PDF file
+        //   cy.get('[src="../../../../assets/image/icon/pdf.png"]').click()    
+        
+        cy.wait(10000)
+        
+        //Click on Download File
+        cy.get('[title="Download Report"] > img').click({ force: true })
+        cy.wait(4000)
 
     //Click on Download Button
-    cy.get('#DownloadModal > .modal-dialog > .modal-content > .modal-footer > :nth-child(1)').click({ force: true })
-    cy.wait(5000)
-
-    //Click on CLOSE Button
-    cy.get('#DownloadModal > .modal-dialog > .modal-content > .modal-header > .btn-close').click({ force: true })
+    cy.get('#DownloadModal > .modal-dialog > .modal-content > .modal-footer > :nth-child(1)').click()
     cy.wait(3000)
 
-    //Click on My Position
-    //cy.get('.segment').type("{downArrow}{downArrow}{Enter}")
-    //.type("{downArrow}{downArrow}{Enter}")
-    //cy.wait(4000)
+    //Click on CLOSE Button
+    cy.get('#DownloadModal > .modal-dialog > .modal-content > .modal-header > .btn-close').click()
+    cy.wait(3000)
+  
+        }
+        else
+        {
+          cy.log('No data found')
+        }
+       // Scrolling to top
+         cy.wait(2000)
+         cy.scrollTo('top')
 
-    // //Click on SUBMIT Button
-    //cy.get('form.ng-touched > :nth-child(2) > :nth-child(2)').click()
-    //cy.wait(4000)
 
+    // //Download File
+    // cy.get('[data-target="#DownloadModal"]').click()
+    // cy.wait(7000)
+
+    //Click on Download File
+    cy.get('[title="Download Report"] > img').click()
+    cy.wait(4000)
+
+    //Click on Download Button
+    cy.get('#DownloadModal > .modal-dialog > .modal-content > .modal-footer > :nth-child(1)').click()
+    cy.wait(3000)
+
+    //Click on CLOSE Button
+    cy.get('#DownloadModal > .modal-dialog > .modal-content > .modal-header > .btn-close').click()
+    cy.wait(3000)
+
+    // //Click on My Position
+    // cy.get('.segment').type("{downArrow}{downArrow}{Enter}")
+    // //.type("{downArrow}{downArrow}{Enter}")
+    // cy.wait(4000)
+
+    // // // //Click on SUBMIT Button
+    // // //cy.get('form.ng-touched > :nth-child(2) > :nth-child(2)').click({ force: true })
+    // // cy.wait(4000)
+
+    // // if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))
+    // //   {
+    // //     cy.log('data found')
+    // //     // downloading Excel File 
+        
+    // //   //   cy.get('[src="../../../../assets/image/icon/excel.png"]').click()
+    // //   //   cy.wait(2000)
+    // //   //   // Downloading PDF file
+    // //   //   cy.get('[src="../../../../assets/image/icon/pdf.png"]').click()    
+      
+    // //   cy.wait(6000)
+      
+     
+
+    // //   }
+    // //   else
+    // //   {
+    // //     cy.log('No data found')
+    // //   }
+    // //  // Scrolling to top
+    // //    cy.wait(2000)
+    // //    cy.scrollTo('top')
 
 
 })

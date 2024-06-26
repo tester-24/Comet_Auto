@@ -6,7 +6,7 @@ const loginPage = new LoginPage
 it('Comet_Jainam', () => {
     cy.visit('https://comet.jainam.in/#/startup')
     cy.wait(3000)
-    cy.get('.login-space-btn').click()
+    cy.get('.login-space-btn').click({ force: true })
 
     loginPage.enterUsername()
     loginPage.enterPassword()
@@ -27,7 +27,7 @@ it('Comet_Jainam', () => {
 
 
     //Enter Pin
-    cy.wait(1000);
+    cy.wait(3000);
     cy.get('[formcontrolname="otp1"]').type('1');
     cy.get('[formcontrolname="otp2"]').type('2');
     cy.get('[formcontrolname="otp3"]').type('3');
@@ -63,7 +63,7 @@ it('Comet_Jainam', () => {
 
      //Click on view
      cy.get('.btn').click()
-     cy.wait(20000)
+     cy.wait(25000)
 
 
      cy.get('i.fa-cloud-download').eq(0).click({ force: true })

@@ -5,8 +5,8 @@ const loginPage = new LoginPage
 
 it('Comet_Jainam', () => {
     cy.visit('https://comet.jainam.in/#/startup')
-    cy.wait(3000)
-    cy.get('.login-space-btn').click()
+    cy.wait(6000)
+    cy.get('.login-space-btn').click({force:true})
 
     loginPage.enterUsername()
     loginPage.enterPassword()
@@ -24,7 +24,7 @@ it('Comet_Jainam', () => {
   cy.get('[formcontrolname="otp2"]').type('2');
   cy.get('[formcontrolname="otp3"]').type('3');
   cy.get('[formcontrolname="otp4"]').type('4');
-  cy.wait(5000);
+  cy.wait(8000);
    
    //cy.get('.continue_button_wrap > p').click()
    cy.wait(8000)
@@ -38,268 +38,406 @@ it('Comet_Jainam', () => {
     cy.get('[href="#/ledger"]').click()
     cy.wait(4000)
 
-    // 1.) Ledger - All 
-     //cy.get('[href="#/ledger"]').click()
-    //cy.wait(3000)
+   // // 1) Ledger - ALL
+    // cy.get('[href="#/ledger"]').click()
+    // cy.wait(3000)
 
-    
-    cy.get('kendo-dropdownlist[name="calendar"] span').eq(1).click()
-    .type("{downArrow}{downArrow}{downArrow}{Enter}")
-    cy.wait(4000)
-
-    // //Enter Code
-    // cy.get('.segment2 > .w-100').type('tb1881')
-    // cy.wait(4000)
-
-    //Click on view 
     cy.get('.mt-2 > .btn').click({ force: true })
-    cy.wait(40000)
+    cy.wait(20000)
 
-    //Downloads
-    cy.get('img[src="../../../../assets/image/ledger_download.png"]').click({ force: true })
-    //cy.get('.text-end > .btn').click({ force: true })
-    cy.wait(5000)
+    if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))
+      {
+        cy.log('data found')
+        // downloading Excel File 
+        
+        // Scrolling to top
+        cy.wait(2000)
+        cy.scrollTo('top')
+       
 
-    // Send Email 
-    cy.get('.modal-footer > :nth-child(1)').click()
-    cy.wait(4000)
+        //Click on Download Button
+        cy.get('.btn > img').click()
+        cy.wait(5000)
 
-    // Download - PDF 
-    cy.get('#pdf').click({ force: true })
-    cy.wait(4000)
+        //Send Email
+        cy.get('.modal-footer > :nth-child(1)').click()
+        cy.wait(4000)
+        
 
-    // Download 
-    cy.get('.modal-footer > :nth-child(2)').click()
-    cy.wait(4000)
+        //Download - PDF/EXCEL
+        cy.get('.modal-footer > :nth-child(2)').click()
+        cy.get('#excel').click()
+        cy.get('.modal-footer > :nth-child(2)').click()
+        cy.get('#pdf').click()
+        cy.get('.modal-footer > :nth-child(2)').click()
+        cy.wait(5000)
 
 
-    //Contract Bills
 
-    cy.get('#bills').click({ force: true })
-    cy.wait(3000)
+
+        //Contract Bills
+
+     cy.get('#bills').click({ force: true })
+     cy.wait(3000)
 
      // Download - PDF 
      cy.get('.modal-footer > :nth-child(2)').click({ force: true })
      cy.wait(4000)
  
      
-    //Close
-    cy.get('.btn-close').click({ force: true })
-    cy.wait(4000)
-
-
-    //2.)SELECT- EQUITY 
-    cy.get('span.k-input-value-text').eq(0).click({ force: true })
-    //.type("{downArrow}{Enter}")
-    cy.wait(5000)
-
-
-    cy.get('kendo-dropdownlist[name="calendar"] span').eq(1).click({ force: true })
-    //.type("{downArrow}{downArrow}{downArrow}{Enter}")
-    cy.wait(6000)
-
-    //  //Enter Code
-    //  cy.get('.segment2 > .w-100').clear()
-    //  cy.get('.segment2 > .w-100').type('WA603')
-
+     //Close
+     cy.get('.btn-close').click({ force: true })
      cy.wait(4000)
 
 
-    //Click on view 
-    cy.get('.mt-2 > .btn').click()
-    cy.wait(5000)
 
-
-    //Ledger 
-    //Downloads
+     //EMAILS
+      // Click on Contract Bills 
     cy.get('.btn > img').click({ force: true })
-    cy.wait(8000)
-
-    // Send Email 
-    cy.get('.modal-footer > :nth-child(1)').click({ force: true })
-    cy.wait(8000)
-
-    // Download - PDF 
-    cy.get('#pdf').click()
     cy.wait(4000)
 
-    // Download 
-    cy.get('.modal-footer > :nth-child(2)').click()
-    cy.wait(4000)
-
-    //Contract Bills
-
-    cy.get('#bills').click({ force: true })
+    //Bills 
+    cy.get('#bills').click({force:true})
     cy.wait(3000)
 
-     // Download - PDF 
-     cy.get('.modal-footer > :nth-child(2)').click({ force: true })
-     cy.wait(4000)
- 
-    //Close
-    cy.get('.btn-close').click({ force: true })
-    cy.wait(3000)
-
-
-
-
-    //3.) SELECT - FUTURE_OPTION
-    cy.get('span.k-input-value-text').eq(0).click({ force: true })
-    //.type("{downArrow}{Enter}")
-    cy.wait(3000)
-
-
-    // Selecting FINANCIAL YEAR.
-    cy.get('kendo-dropdownlist[name="calendar"] span').eq(1).click({ force: true })
-    //.type("{downArrow}{downArrow}{downArrow}{Enter}")
-    cy.wait(4000)
-
-
-    // //Enter Code
-    // cy.get('.segment2 > .w-100').clear()
-    // cy.get('.segment2 > .w-100').type('WA603')
-
-
-    //Click on view 
-    cy.get('.mt-2 > .btn').click()
+    //Download 
+    cy.get('.modal-footer > :nth-child(2)').click({force:true})
     cy.wait(8000)
-
 
     //Ledger 
-    //Downloads
-    cy.get('.mt-2 > .btn').click({ force: true })
-    cy.wait(8000)
-
-    // Send Email 
-    cy.get('.modal-footer > :nth-child(1)').click({ force: true })
-    cy.wait(4000)
-
-    // // Download - PDF 
-    // cy.get('#pdf').click()
-    // cy.wait(4000)
-
-    // Download 
     cy.get('.modal-footer > :nth-child(2)').click({ force: true })
     cy.wait(4000)
 
-    //Contract Bills
+    //Downloads -- SEND EMAIL
+    cy.get('.modal-footer > :nth-child(1)').click({ force: true })
+    cy.wait(6000)
 
-    cy.get('#bills').click({ force: true })
-    cy.wait(3000)
+    //Click on [X]
+    cy.get('.btn-close').click({ force: true })
+    cy.wait(4000)
 
-     // Download - PDF 
-     cy.get('.modal-footer > :nth-child(2)').click({ force: true })
-     cy.wait(4000)
- 
+
+
+      // Scrolling to top
+       cy.wait(2000)
+      cy.scrollTo('top')
+
+      }
+      else
+      {
+        cy.log('No data found')
+      }
+     
+
+       // EQUITY
+
+        //Selecting from SEGMENT - FUTURE_OPTION
+        cy.get('.container > form.ng-valid > :nth-child(2) > :nth-child(1)').click()
+        .type("{downArrow}{downArrow}{Enter}")
+        cy.wait(4000)
+
+
+          //click on year
+          cy.get('form.ng-valid > :nth-child(2) > :nth-child(2)').click()
+              .type("{downArrow}{Enter}")
+          cy.wait(2000)
+         //Click on View Button
+          cy.get(':nth-child(2) > :nth-child(3) > .btn').click()
+          cy.wait(10000)
+
+
+          if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))
+            {
+              cy.log('data found')
+              // downloading Excel File 
+              
+              // Scrolling to top
+              cy.wait(2000)
+              cy.scrollTo('top')
+             
+      
+              //Click on Download Button
+              cy.get('.btn > img').click()
+              cy.wait(5000)
+      
+              //Send Email
+              cy.get('.modal-footer > :nth-child(1)').click()
+              cy.wait(4000)
+              
+      
+              //Download - PDF/EXCEL
+              cy.get('.modal-footer > :nth-child(2)').click()
+              cy.get('#excel').click()
+              cy.get('.modal-footer > :nth-child(2)').click()
+              cy.get('#pdf').click()
+              cy.get('.modal-footer > :nth-child(2)').click()
+              cy.wait(5000)
+      
+      
+      
+      
+              //Contract Bills
+      
+           cy.get('#bills').click({ force: true })
+           cy.wait(3000)
+      
+           // Download - PDF 
+           cy.get('.modal-footer > :nth-child(2)').click({ force: true })
+           cy.wait(4000)
+       
+           
+           //Close
+           cy.get('.btn-close').click({ force: true })
+           cy.wait(4000)
+      
+      
+      
+           //EMAILS
+          // Click on Contract Bills 
+          cy.get('.btn > img').click({ force: true })
+          cy.wait(4000)
+      
+          //Bills 
+          cy.get('#bills').click({ force: true })
+          cy.wait(3000)
+      
+          //Download 
+          cy.get('.modal-footer > :nth-child(2)').click({ force: true })
+          cy.wait(8000)
+      
+          //Ledger 
+          cy.get('.modal-footer > :nth-child(2)').click({ force: true })
+          cy.wait(4000)
+      
+          //Downloads -- SEND EMAIL
+          cy.get('.modal-footer > :nth-child(1)').click({ force: true })
+          cy.wait(6000)
+      
+          //Click on [X]
+          cy.get('.btn-close').click({ force: true })
+          cy.wait(4000)
+      
+      
+      
+            // Scrolling to top
+             cy.wait(2000)
+            cy.scrollTo('top')
+      
+            }
+            else
+            {
+              cy.log('No data found')
+            }
+
     
-    //Close
-    cy.get('.btn-close').click({ force: true })
-    cy.wait(3000)
+          // FUTURE OPTION
+
+                  //Selecting from SEGMENT - FUTURE_OPTION
+                cy.get('.container > form.ng-valid > :nth-child(2) > :nth-child(1)').click({ force: true })
+              .type("{downArrow}{Enter}")
+              cy.wait(4000)
 
 
-   //4.) SELECT - CURRENCY 
+          //click on year
+          cy.get('form.ng-valid > :nth-child(2) > :nth-child(2)').click()
+              .type("{downArrow}{Enter}")
+          cy.wait(2000)
 
-   cy.get('span.k-input-value-text').eq(0).click({ force: true })
-    //.type("{downArrow}{Enter}")
-    cy.wait(3000)
-
-
-    // Selecting FINANCIAL YEAR.
-    cy.get('kendo-dropdownlist[name="calendar"] span').eq(1).click({ force: true })
-    .type("{downArrow}{downArrow}{downArrow}{Enter}")
-    cy.wait(4000)
+         //Click on View Button
+          cy.get(':nth-child(2) > :nth-child(3) > .btn').click()
+          cy.wait(10000)
 
 
-    //  //Enter Code
-    //  cy.get('.segment2 > .w-100').clear()
-    //  cy.get('.segment2 > .w-100').type('WA603')
-
-    //Click on view 
-    cy.get('.mt-2 > .btn').click({ force: true })
-    cy.wait(8000)
-
-
-    //Ledger 
-    //Downloads
-    cy.get('.text-end > .btn').click({ force: true })
-    cy.wait(8000)
-
-    // Send Email 
-    cy.get('.modal-footer > :nth-child(1)').click({ force: true })
-    cy.wait(4000)
-
-    // // Download - PDF 
-    // cy.get('#pdf').click({ force: true })
-    // cy.wait(4000)
-
-    // Download 
-    cy.get('.modal-footer > :nth-child(2)').click({ force: true })
-    cy.wait(4000)
-
-    //Contract Bills
-
-    cy.get('#bills').click()
-    cy.wait(3000)
-
-     // Download - PDF 
-     cy.get('.modal-footer > :nth-child(2)').click({ force: true })
-     cy.wait(4000)
- 
- 
-    //Close
-    cy.get('.btn-close').click({ force: true })
-    cy.wait(3000)
-
-
-    //5.) SELECT - COMMODITY 
-
-    cy.get('span.k-input-value-text').eq(0).click({ force: true })
-    //.type("{downArrow}{Enter}")
-    cy.wait(3000)
-
-
-    // Selecting FINANCIAL YEAR.
-    cy.get('kendo-dropdownlist[name="calendar"] span').eq(1).click()
-    .type("{downArrow}{downArrow}{downArrow}{Enter}")
-    cy.wait(4000)
-
-    // //Enter Code
-    // cy.get('.segment2 > .w-100').clear()
-    // cy.get('.segment2 > .w-100').type('WA603')
-
-
-    //Click on view 
-    cy.get('.mt-2 > .btn').click()
-    cy.wait(5000)
-
-
-    //Ledger 
-    //Downloads
-    cy.get('.btn > img').click({ force: true })
-    cy.wait(6000)
-
-    // Send Email 
-    cy.get('.modal-footer > :nth-child(1)').click({ force: true })
-    cy.wait(4000)
-
-    // // Download - PDF 
-    // cy.get('.modal-footer > :nth-child(2)').click({ force: true })
-    // cy.wait(4000)
-
-    //Contract Bills
-
-    cy.get('#bills').click({ force: true })
-    cy.wait(3000)
-
-     // Download - PDF 
-     cy.get('.modal-footer > :nth-child(2)').click()
-     cy.wait(4000)
- 
- 
-    //Close
-    cy.get('.btn-close').click({ force: true })
-    cy.wait(3000)
+          if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))
+            {
+              cy.log('data found')
+              // downloading Excel File 
+              
+              // Scrolling to top
+              cy.wait(2000)
+              cy.scrollTo('top')
+             
+      
+              //Click on Download Button
+              cy.get('.btn > img').click()
+              cy.wait(5000)
+      
+              //Send Email
+              cy.get('.modal-footer > :nth-child(1)').click()
+              cy.wait(4000)
+              
+      
+              //Download - PDF/EXCEL
+              cy.get('.modal-footer > :nth-child(2)').click({force:true})
+              cy.get('#excel').click({ force: true })
+              cy.get('.modal-footer > :nth-child(2)').click()
+              cy.get('#pdf').click({ force: true })
+              cy.get('.modal-footer > :nth-child(2)').click()
+              cy.wait(5000)
+      
+      
+      
+      
+              //Contract Bills
+      
+           cy.get('#bills').click({ force: true })
+           cy.wait(3000)
+      
+           // Download - PDF 
+           cy.get('.modal-footer > :nth-child(2)').click({ force: true })
+           cy.wait(4000)
+       
+           
+           //Close
+           cy.get('.btn-close').click({ force: true })
+           cy.wait(4000)
+      
+      
+      
+           //EMAILS
+          // Click on Contract Bills 
+          cy.get('.btn > img').click({ force: true })
+          cy.wait(4000)
+      
+          //Bills 
+          cy.get('#bills').click({ force: true })
+          cy.wait(3000)
+      
+          //Download 
+          cy.get('.modal-footer > :nth-child(2)').click({ force: true })
+          cy.wait(8000)
+      
+          //Ledger 
+          cy.get('.modal-footer > :nth-child(2)').click({ force: true })
+          cy.wait(4000)
+      
+          //Downloads -- SEND EMAIL
+          cy.get('.modal-footer > :nth-child(1)').click({ force: true })
+          cy.wait(6000)
+      
+          //Click on [X]
+          cy.get('.btn-close').click({ force: true })
+          cy.wait(4000)
+      
+      
+      
+            // Scrolling to top
+             cy.wait(2000)
+            cy.scrollTo('top')
+      
+            }
+            else
+            {
+              cy.log('No data found')
+            }
 
 
-})
 
+
+
+            
+          // CURRENCY
+
+                  //Selecting from SEGMENT - FUTURE_OPTION
+                  cy.get('.container > form.ng-valid > :nth-child(2) > :nth-child(1)').click({ force: true })
+                  .type("{downArrow}{Enter}")
+                  cy.wait(4000)
+    
+    
+              //click on year
+              cy.get('form.ng-valid > :nth-child(2) > :nth-child(2)').click()
+                  .type("{downArrow}{Enter}")
+              cy.wait(2000)
+             //Click on View Button
+              cy.get(':nth-child(2) > :nth-child(3) > .btn').click()
+              cy.wait(6000)
+    
+    
+              // if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))
+              //   {
+              //     cy.log('data found')
+              //     // downloading Excel File 
+                  
+              //     // Scrolling to top
+              //     cy.wait(2000)
+              //     cy.scrollTo('top')
+                 
+          
+              //     //Click on Download Button
+              //     cy.get('.btn > img').click()
+              //     cy.wait(5000)
+          
+              //     //Send Email
+              //     cy.get('.modal-footer > :nth-child(1)').click()
+              //     cy.wait(4000)
+                  
+          
+              //     //Download - PDF/EXCEL
+              //     cy.get('.modal-footer > :nth-child(2)').click()
+              //     cy.get('#excel').click()
+              //     cy.get('.modal-footer > :nth-child(2)').click()
+              //     cy.get('#pdf').click()
+              //     cy.get('.modal-footer > :nth-child(2)').click()
+              //     cy.wait(5000)
+          
+          
+          
+          
+              //     //Contract Bills
+          
+              //  cy.get('#bills').click({ force: true })
+              //  cy.wait(3000)
+          
+              //  // Download - PDF 
+              //  cy.get('.modal-footer > :nth-child(2)').click({ force: true })
+              //  cy.wait(4000)
+           
+               
+              //  //Close
+              //  cy.get('.btn-close').click({ force: true })
+              //  cy.wait(4000)
+          
+          
+          
+//                //EMAILS
+//               // Click on Contract Bills 
+//               cy.get('.btn > img').click({ force: true })
+//               cy.wait(4000)
+          
+//               //Bills 
+//               cy.get('#bills').click({ force: true })
+//               cy.wait(3000)
+          
+//               //Download 
+//               cy.get('.modal-footer > :nth-child(2)').click({ force: true })
+//               cy.wait(8000)
+          
+//               //Ledger 
+//               cy.get('.modal-footer > :nth-child(2)').click({ force: true })
+//               cy.wait(4000)
+          
+//               //Downloads -- SEND EMAIL
+//               cy.get('.modal-footer > :nth-child(1)').click({ force: true })
+//               cy.wait(6000)
+          
+//               //Click on [X]
+//               cy.get('.btn-close').click({ force: true })
+//               cy.wait(4000)
+          
+          
+          
+//                 // Scrolling to top
+//                  cy.wait(2000)
+//                 cy.scrollTo('top')
+          
+//                 }
+//                 else
+//                 {
+//                   cy.log('No data found')
+//                 }
+    
+    
+
+
+
+ })

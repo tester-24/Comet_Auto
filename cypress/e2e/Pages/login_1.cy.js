@@ -10,6 +10,6 @@ export class LoginPage {
     }
 
     clickLogin() {
-        cy.get('.login_button_wrap').click({ force: true });
+        cy.get('.login_button_wrap > p').click({ force: true });
     }
 }
