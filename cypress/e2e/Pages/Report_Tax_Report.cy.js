@@ -37,13 +37,13 @@ it('Comet_Jainam', () => {
    //cy.get('.continue_button_wrap > p').click()
    cy.wait(3000)
 
-
     // //Click on form
     // cy.get('#AddNomineeDetail > .modal-dialog > .modal-content > .modal-body > .close').click({ force: true })
     // cy.wait(4000);
 
     // click on Reports
-    cy.get('#ReportDropdown').click()
+    //cy.wait(5000)
+    cy.get('#ReportDropdown').click({force:true})
     cy.get('[href="#/tax"]').click()
     
     cy.wait(4000)

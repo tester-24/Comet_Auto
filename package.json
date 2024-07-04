@@ -291,7 +291,7 @@
     "yocto-queue": "^0.1.0"
   },
   "devDependencies": {
-    "cypress": "^13.12.0",
+    "cypress": "^13.13.0",
     "mocha": "^10.3.0"
   },
   "scripts": {

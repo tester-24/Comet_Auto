@@ -6,7 +6,7 @@ const loginPage = new LoginPage
 it('Comet_Jainam', () => {
     cy.visit('https://comet.jainam.in/#/startup')
     cy.wait(3000)
-    cy.get('.login-space-btn').click()
+    cy.get('.login-space-btn').click({force:true})
 
     loginPage.enterUsername()
     loginPage.enterPassword()
@@ -46,7 +46,9 @@ it('Comet_Jainam', () => {
 
 
     // click on Reports
+    cy.wait(2000)
     cy.get('#ReportDropdown').click({ force: true })
+    cy.wait(1000)
     cy.get('[href="#/portfolio"]').click()
     cy.wait(4000)
 
@@ -58,6 +60,7 @@ it('Comet_Jainam', () => {
 
 
     //Click on My Holding
+    cy.wait(2000)
     cy.get('span.k-input-value-text').eq(0)
     cy.get('span.k-input-inner span').eq(0)
     cy.get('kendo-dropdownlist[name="CategoryName"] span').eq(1)

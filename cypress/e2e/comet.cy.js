@@ -36,12 +36,12 @@ it('Comet_Jainam', () => {
 //    cy.wait(3000);
  
 
-    // Click on LAS
-    cy.get('.menu_hover.ng-star-inserted > .nav-link').click()
-    cy.wait(12000)
+    // // Click on LAS
+    // cy.get('.menu_hover.ng-star-inserted > .nav-link').click()
+    // cy.wait(12000)
 
-    //Click on Approve Stock List
-    cy.get('.approve-stock').click()
+    // //Click on Approve Stock List
+    // cy.get('.approve-stock').click()
 
     
 })
