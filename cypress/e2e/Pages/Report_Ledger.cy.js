@@ -247,7 +247,7 @@ it('Comet_Jainam', () => {
 
          //Click on View Button
           cy.get(':nth-child(2) > :nth-child(3) > .btn').click()
-          cy.wait(10000)
+          cy.wait(7000)
 
 
           if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))
