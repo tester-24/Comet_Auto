@@ -44,7 +44,7 @@ it('Comet_Jainam', () => {
     // cy.wait(3000)
 
     cy.get('.mt-2 > .btn').click({ force: true })
-    cy.wait(10000)  
+    cy.wait(8000)  
 
     if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))
       {
@@ -169,6 +169,7 @@ it('Comet_Jainam', () => {
       
               //Download - PDF/EXCEL
               cy.get('.modal-footer > :nth-child(2)').click({force:true})
+              cy.wait(2000)
               cy.get('#excel').click()
               cy.get('.modal-footer > :nth-child(2)').click()
               cy.get('#pdf').click({force:true})
