@@ -1,5 +1,6 @@
 /// <reference types="cypress"/>
 
+import { trimEnd } from "lodash"
 import { LoginPage } from "./comet_login.cy.js"
 const loginPage = new LoginPage
 
@@ -67,9 +68,9 @@ it('Comet_Jainam', () => {
 
         //Download - PDF/EXCEL
         cy.get('.modal-footer > :nth-child(2)').click()
-        cy.get('#excel').click()
+        cy.get('#excel').click({force:true})
         cy.get('.modal-footer > :nth-child(2)').click()
-        cy.get('#pdf').click()
+        cy.get('#pdf').click({force:true})
         cy.get('.modal-footer > :nth-child(2)').click()
         cy.wait(5000)
 

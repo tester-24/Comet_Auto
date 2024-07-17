@@ -84,6 +84,7 @@ it('Comet_Jainam', () => {
        // cy.wait(10000)
         
         //Click on Download File
+        cy.wait(3000)
         cy.get('[title="Download Report"] > img').click({ force: true })
         cy.wait(4000)
 
