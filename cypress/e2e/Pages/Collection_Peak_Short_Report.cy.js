@@ -11,11 +11,10 @@ it('Comet_Jainam', () => {
     loginPage.enterUsername()
     loginPage.enterPassword()
     loginPage.clickLogin()
-    cy.wait(5000)
-
+   
     //Pin Page
     cy.get('.form_wrap').click()
-    cy.wait(2000)
+    //cy.wait(2000)
  
     
   //Enter Pin
@@ -27,53 +26,48 @@ it('Comet_Jainam', () => {
   cy.wait(3000);
    
    //cy.get('.continue_button_wrap > p').click()
-   cy.wait(5000)
+   
 
   //Click on Partner
+  cy.wait(5000)
   cy.get('#PartnerDropdown').click({ force: true })
-  cy.wait(3000)
+  
 
   // tag: smoke
 
   //Click on Collection
   cy.get('[href="#/collection"]').click()
-  cy.wait(3000)
+ 
 
   //Select Category
   cy.get('.k-input-value-text').click()
   cy.get('select')
-  cy.wait(3000)
+ 
 
   cy.get('.k-input-value-text').click()
   .type("{downArrow}{downArrow}{downArrow}{downArrow}{downArrow}{downArrow}{Enter}")
-  cy.wait(3000)
+  
    
 
   //Click on Submit Button
   cy.get('.col-md-3 > .btn').click()
-  cy.wait(4000)
-
+ 
+  cy.wait(10000)
   if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))
     {
       cy.log('data found')
       // downloading Excel File 
       
        //Download Excel
-        // cy.get('.btn > .ng-star-inserted').click()
-        // cy.wait(3000)
- 
+       cy.wait(20000)
+        cy.get('.btn > .ng-star-inserted').click()
+        
     }
     else
     {
       cy.log('No data found')
     }
    // Scrolling to top
-     cy.wait(2000)
      cy.scrollTo('top')
 
-  
-  
-
- 
-   
 })
