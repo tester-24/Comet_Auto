@@ -23,7 +23,7 @@ it('Comet_Jainam', () => {
     cy.get('[formcontrolname="otp4"]').type('4');
     
     // click on Reports
-    cy.wait(3000)
+    cy.wait(5000)
     cy.get('#ReportDropdown').click({force:true})
     cy.get('[href="#/tax"]').click()
     

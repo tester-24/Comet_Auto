@@ -23,6 +23,7 @@ it('Comet_Jainam', () => {
   cy.get('[formcontrolname="otp4"]').type('4');
   
   //Click on Partner
+  cy.wait(3000)
   cy.get('#PartnerDropdown').click({ force: true })
  
   
@@ -47,6 +48,7 @@ it('Comet_Jainam', () => {
       cy.wait(5000) 
       
        //Download Excel
+       cy.wait(20000)
         cy.get('.btn > .ng-star-inserted').click({ force: true })
         cy.wait(3000)
  

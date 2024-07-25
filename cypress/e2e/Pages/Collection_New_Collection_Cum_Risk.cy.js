@@ -58,12 +58,10 @@ it('Comet_Jainam', () => {
   if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))
     {
       cy.log('data found')
-      // downloading Excel File
-      cy.wait(5000) 
       
-       //Download Excel
-       cy.wait(20000)
-        cy.get('.btn > .ng-star-inserted').click({force:true})
+      // Downloading Excel File
+      cy.wait(5000) 
+      cy.get('.btn > .ng-star-inserted').click()
         cy.wait(3000)
  
     }
@@ -72,7 +70,6 @@ it('Comet_Jainam', () => {
       cy.log('No data found')
     }
    // Scrolling to top
-    
      cy.scrollTo('top')
 
   })
