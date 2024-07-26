@@ -156,7 +156,7 @@ it('Comet_Jainam', () => {
 
 
     // click on Reports
-    //cy.wait(2000)
+    cy.wait(2000)
     cy.get('#ReportDropdown').click({ force: true })
   })
    // cy.wait(1000);
@@ -238,7 +238,7 @@ it('Comet_Jainam', () => {
        // cy.wait(10000)
         
         //Click on Download File
-       // cy.wait(5000)
+        cy.wait(3000)
         cy.get('[title="Download Report"] > img').click({ force: true })
         cy.wait(1000);
 
