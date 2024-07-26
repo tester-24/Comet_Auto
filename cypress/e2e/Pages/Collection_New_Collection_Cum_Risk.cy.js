@@ -30,8 +30,9 @@ it('Comet_Jainam', () => {
    //cy.wait(6000)
 
   //Click on Partner
+  cy.wait(2000)
   cy.get('#PartnerDropdown').click({ force: true })
-  cy.wait(3000)
+ // cy.wait(3000)
 
   // tag: smoke
 
@@ -60,9 +61,9 @@ it('Comet_Jainam', () => {
       cy.log('data found')
       
       // Downloading Excel File
-      cy.wait(5000) 
+      cy.wait(4000) 
       cy.get('.btn > .ng-star-inserted').click()
-        cy.wait(3000)
+    
  
     }
     else
