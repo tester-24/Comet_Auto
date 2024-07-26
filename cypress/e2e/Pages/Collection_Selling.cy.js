@@ -12,7 +12,7 @@ it('Comet_Jainam', () => {
     loginPage.enterPassword()
     loginPage.clickLogin()
    
-    //Pin Page
+    //Pin Pag
     cy.get('.form_wrap').click()
    
   //Enter Pin
@@ -45,12 +45,12 @@ it('Comet_Jainam', () => {
     {
       cy.log('data found')
       // downloading Excel File
-      cy.wait(5000) 
+      //cy.wait(5000) 
       
        //Download Excel
-       cy.wait(20000)
+       cy.wait(5000)
         cy.get('.btn > .ng-star-inserted').click({ force: true })
-        cy.wait(3000)
+        //cy.wait(3000)
  
     }
     else
