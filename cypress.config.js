@@ -15,14 +15,19 @@ module.exports = defineConfig({
     inlineAssets: true,
     saveAllAttempts: true,
     screenshots: true,
-    experimentalMemoryManagement:true,
+    
     //Cypress.config('defaultCommandTimeout', 10000);
     
   },
   e2e: {
     setupNodeEvents(on, config) {
       require('cypress-mochawesome-reporter/plugin')(on);
+      
+
     },
+    experimentalMemoryManagement: true,
+    numTestsKeptInMemory:true,
+    defaultCommandTimeout:6000,
   },
 
 });

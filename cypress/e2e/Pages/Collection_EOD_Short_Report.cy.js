@@ -5,7 +5,7 @@ const loginPage = new LoginPage
 
 it('Comet_Jainam', () => {
     cy.visit('https://comet.jainam.in/#/startup')
-   // cy.wait(3000)
+   cy.wait(3000)
     cy.get('.login-space-btn').click()
 
     loginPage.enterUsername()
@@ -29,6 +29,7 @@ it('Comet_Jainam', () => {
    //cy.wait(3000)
 
   //Click on PARTNERS
+  cy.wait(4000)
   cy.get('#PartnerDropdown').click()
   //cy.wait(3000)
 
@@ -61,7 +62,7 @@ it('Comet_Jainam', () => {
         // downloading Excel File 
         
         //Download Excel
-       
+          cy.wait(9000)
           cy.get('.btn > .ng-star-inserted').click()
           // cy.wait(3000)
    
