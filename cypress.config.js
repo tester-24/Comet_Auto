@@ -15,6 +15,7 @@ module.exports = defineConfig({
     inlineAssets: true,
     saveAllAttempts: true,
     screenshots: true,
+    //Cypress.config('defaultCommandTimeout', 10000);
     
   },
   e2e: {

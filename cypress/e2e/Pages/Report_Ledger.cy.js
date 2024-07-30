@@ -6,46 +6,46 @@ const loginPage = new LoginPage
 
 it('Comet_Jainam', () => {
     cy.visit('https://comet.jainam.in/#/startup')
-    cy.wait(6000)
+    //cy.wait(6000)
     cy.get('.login-space-btn').click({force:true})
 
     loginPage.enterUsername()
     loginPage.enterPassword()
     loginPage.clickLogin()
-    cy.wait(3000)
+    //cy.wait(3000)
 
 
     //Pin Page
     cy.get('.form_wrap').click()
-    cy.wait(2000)
+    //cy.wait(2000)
 
     //Enter Pin
-  cy.wait(3000);
+  //cy.wait(3000);
   cy.get('[formcontrolname="otp1"]').type('1');
   cy.get('[formcontrolname="otp2"]').type('2');
   cy.get('[formcontrolname="otp3"]').type('3');
   cy.get('[formcontrolname="otp4"]').type('4');
-  cy.wait(8000);
+ // cy.wait(8000);
    
    //cy.get('.continue_button_wrap > p').click()
-   cy.wait(8000)
+   //cy.wait(8000)
 
     //    //Click on form
    //    cy.get('#AddNomineeDetail > .modal-dialog > .modal-content > .modal-body > .close').click({ force: true })
    //    cy.wait(4000);
 
     // click on Reports
-    cy.wait(5000)
+    //cy.wait(5000)
     cy.get('#ReportDropdown').click({ force: true })
     cy.get('[href="#/ledger"]').click()
-    cy.wait(4000)
+    //cy.wait(4000)
 
    // // 1) Ledger - ALL
     // cy.get('[href="#/ledger"]').click()
     // cy.wait(3000)
 
     cy.get('.mt-2 > .btn').click({ force: true })
-    cy.wait(8000)  
+   // cy.wait(8000)  
 
     if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))
       {
@@ -53,17 +53,17 @@ it('Comet_Jainam', () => {
         // downloading Excel File 
         
         // Scrolling to top
-        cy.wait(2000)
+        //cy.wait(2000)
         cy.scrollTo('top')
        
 
         //Click on Download Button
         cy.get('.btn > img').click()
-        cy.wait(5000)
+       // cy.wait(5000)
 
         //Send Email
         cy.get('.modal-footer > :nth-child(1)').click()
-        cy.wait(4000)
+        //cy.wait(4000)
         
 
         //Download - PDF/EXCEL
@@ -72,7 +72,7 @@ it('Comet_Jainam', () => {
         cy.get('.modal-footer > :nth-child(2)').click()
         cy.get('#pdf').click({force:true})
         cy.get('.modal-footer > :nth-child(2)').click()
-        cy.wait(5000)
+        //cy.wait(5000)
 
 
 
@@ -80,16 +80,16 @@ it('Comet_Jainam', () => {
         //Contract Bills
 
      cy.get('#bills').click({ force: true })
-     cy.wait(3000)
+     //cy.wait(3000)
 
      // Download - PDF 
      cy.get('.modal-footer > :nth-child(2)').click({ force: true })
-     cy.wait(4000)
+     //cy.wait(4000)
  
      
      //Close
      cy.get('.btn-close').click({ force: true })
-     cy.wait(4000)
+     //cy.wait(4000)
 
 
 

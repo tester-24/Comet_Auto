@@ -17,6 +17,9 @@
 
 import './commands'
 import 'cypress-mochawesome-reporter/register';
+//import 'cypress-wait-until';
+
+require('cypress-xpath');
 
 
 //Alternatively you can use CommonJS syntax;

@@ -1,11 +1,12 @@
 /// <reference types="cypress"/>
 
+import { text } from "body-parser"
 import { LoginPage } from "./login_1.cy.js"
 const loginPage = new LoginPage
 
 it('Comet_Jainam', () => {
     cy.visit('https://comet.jainam.in/#/startup')
-    //cy.wait(3000)
+    cy.wait(3000)
     cy.get('.login-space-btn').click()
 
     loginPage.enterUsername()
@@ -13,12 +14,12 @@ it('Comet_Jainam', () => {
     loginPage.clickLogin()
     
 
-    //Pin Page
+    //Pin Page    
     cy.get('.form_wrap').click()
    
  
   //Enter Pin
-  cy.wait(1000);
+  //cy.wait(1000);
   cy.get('[formcontrolname="otp1"]').type('1');
   cy.get('[formcontrolname="otp2"]').type('2');
   cy.get('[formcontrolname="otp3"]').type('3');
@@ -30,7 +31,8 @@ it('Comet_Jainam', () => {
    //cy.wait(6000)
 
   //Click on Partner
-  cy.wait(2000)
+  //cy.wait(2000)
+  cy.get('#PartnerDropdown').should('be.visible')
   cy.get('#PartnerDropdown').click({ force: true })
  // cy.wait(3000)
 
@@ -52,24 +54,31 @@ it('Comet_Jainam', () => {
 
   //Click on Submit Button
   //cy.get('.col-md-3 > .btn').click()
+  cy.get('.col-md-3 > .btn').should('be.visible')
   cy.get('.col-md-3 > .btn').click()
+ // cy.get(':nth-child(1) > .text-disable-drag').contains(text,' Last Updated on :')
+//  cy.xpath('/html[1]/body[1]/app-root[1]/app-layout[1]/div[1]/app-collection[1]/div[4]/div[1]/div[1]/div[1]/label[1]').then(() => {
+    // Continue with the next code after data is loaded
+   // cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',1)
+  
+//})
  
  
 
-  if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))
+ if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))
     {
       cy.log('data found')
       
       // Downloading Excel File
-      cy.wait(4000) 
+      //cy.wait(4000) 
       cy.get('.btn > .ng-star-inserted').click()
     
  
-    }
-    else
+   }
+   else
     {
       cy.log('No data found')
-    }
+   }
    // Scrolling to top
      cy.scrollTo('top')
 

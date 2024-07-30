@@ -57,3 +57,4 @@ Cypress.Commands.add('sendEmail', (subject, body, recipient) => {
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+import 'cypress-wait-until';

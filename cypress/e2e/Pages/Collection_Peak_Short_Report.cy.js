@@ -5,7 +5,7 @@ const loginPage = new LoginPage
 
 it('Comet_Jainam', () => {
     cy.visit('https://comet.jainam.in/#/startup')
-    cy.wait(3000)
+   // cy.wait(3000)
     cy.get('.login-space-btn').click()
 
     loginPage.enterUsername()
@@ -18,18 +18,18 @@ it('Comet_Jainam', () => {
  
     
   //Enter Pin
-  cy.wait(1000);
+  //cy.wait(1000);
   cy.get('[formcontrolname="otp1"]').type('1');
   cy.get('[formcontrolname="otp2"]').type('2');
   cy.get('[formcontrolname="otp3"]').type('3');
   cy.get('[formcontrolname="otp4"]').type('4');
-  cy.wait(3000);
+  //cy.wait(3000);
    
    //cy.get('.continue_button_wrap > p').click()
    
 
   //Click on Partner
-  cy.wait(5000)
+  //cy.wait(5000)
   cy.get('#PartnerDropdown').click({ force: true })
   
 
@@ -52,15 +52,15 @@ it('Comet_Jainam', () => {
   //Click on Submit Button
   cy.get('.col-md-3 > .btn').click()
  
-  cy.wait(10000)
+  //cy.wait(10000)
   if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))
     {
       cy.log('data found')
       // downloading Excel File 
       
        //Download Excel
-      //  cy.wait(20000)
-      //   cy.get('.btn > .ng-star-inserted').click()
+        //cy.wait(2000)
+       // cy.get('.btn > .ng-star-inserted').click()
         
     }
     else

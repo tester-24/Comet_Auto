@@ -11,7 +11,7 @@ it('Comet_Jainam', () => {
         const startTime = performance.now(); // Capture start time
   
         // Wait for the page to load (adjust timeout as needed)
-        cy.wait(1000);
+       // cy.wait(1000);
   
         const endTime = performance.now(); // Capture end time
         const loadTime = endTime - startTime; // Calculate load time
@@ -34,7 +34,7 @@ it('Comet_Jainam', () => {
         const startTime = performance.now(); // Capture start time
   
         // Wait for the page to load (adjust timeout as needed)
-        cy.wait(1000);
+       // cy.wait(1000);
   
         const endTime = performance.now(); // Capture end time
         const loadTime = endTime - startTime; // Calculate load time
@@ -81,7 +81,7 @@ it('Comet_Jainam', () => {
 
     //Pin Page
     cy.get('.form_wrap').click()
-    cy.wait(1000);
+   // cy.wait(1000);
 
     cy.window().then((win) => {
         const startTime = performance.now(); // Capture start time
@@ -130,7 +130,7 @@ it('Comet_Jainam', () => {
       const startTime = performance.now(); // Capture start time
 
       // Wait for the page to load (adjust timeout as needed)
-      cy.wait(1000);
+      //cy.wait(1000);
 
       const endTime = performance.now(); // Capture end time
       const loadTime = endTime - startTime; // Calculate load time
@@ -156,7 +156,7 @@ it('Comet_Jainam', () => {
 
 
     // click on Reports
-    cy.wait(2000)
+   // cy.wait(2000)
     cy.get('#ReportDropdown').click({ force: true })
   })
    // cy.wait(1000);
@@ -165,7 +165,7 @@ it('Comet_Jainam', () => {
         const startTime = performance.now(); // Capture start time
   
         // Wait for the page to load (adjust timeout as needed)
-        cy.wait(1000);
+       // cy.wait(1000);
   
         const endTime = performance.now(); // Capture end time
         const loadTime = endTime - startTime; // Calculate load time
@@ -238,15 +238,15 @@ it('Comet_Jainam', () => {
        // cy.wait(10000)
         
         //Click on Download File
-        cy.wait(3000)
+       // cy.wait(3000)
         cy.get('[title="Download Report"] > img').click({ force: true })
-        cy.wait(1000);
+       // cy.wait(1000);
 
         cy.window().then((win) => {
             const startTime = performance.now(); // Capture start time
       
             // Wait for the page to load (adjust timeout as needed)
-            cy.wait(1000);
+           // cy.wait(1000);
       
             const endTime = performance.now(); // Capture end time
             const loadTime = endTime - startTime; // Calculate load time
@@ -266,13 +266,13 @@ it('Comet_Jainam', () => {
     //Click on Download Button
     cy.get('#DownloadModal > .modal-dialog > .modal-content > .modal-footer > :nth-child(1)').click()
     
-    cy.wait(1000);
+    //cy.wait(1000);
 
     cy.window().then((win) => {
         const startTime = performance.now(); // Capture start time
   
         // Wait for the page to load (adjust timeout as needed)
-        cy.wait(1000);
+       // cy.wait(1000);
   
         const endTime = performance.now(); // Capture end time
         const loadTime = endTime - startTime; // Calculate load time
