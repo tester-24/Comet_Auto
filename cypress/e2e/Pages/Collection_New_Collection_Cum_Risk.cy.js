@@ -31,7 +31,7 @@ it('Comet_Jainam', () => {
    //cy.wait(6000)
 
   //Click on Partner
-  //cy.wait(2000)
+  cy.wait(4000)
   cy.get('#PartnerDropdown').should('be.visible')
   cy.get('#PartnerDropdown').click({ force: true })
  // cy.wait(3000)
@@ -70,7 +70,7 @@ it('Comet_Jainam', () => {
       cy.log('data found')
       
       // Downloading Excel File
-      //cy.wait(4000) 
+      cy.wait(4000) 
       cy.get('.btn > .ng-star-inserted').click()
     
  

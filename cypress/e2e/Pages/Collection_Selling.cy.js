@@ -23,7 +23,7 @@ it('Comet_Jainam', () => {
   cy.get('[formcontrolname="otp4"]').type('4');
   
   //Click on Partner
-  cy.wait(3000)
+  cy.wait(4000)
   cy.get('#PartnerDropdown').click({ force: true })
  
   
@@ -38,7 +38,8 @@ it('Comet_Jainam', () => {
   cy.get('.k-input-value-text').click().type("{downArrow}{Enter}")
   
    //Click on Submit Button
-   cy.get('.col-md-3 > .btn').click({ force: true })
+   cy.get('.col-md-3 > .btn').click({ force: true },{timeout:90000})
+
    
   //  cy.get('.la-ball-spin-clockwise-fade').then(() => {
   //   // Continue with the next code after data is loaded
@@ -58,18 +59,19 @@ it('Comet_Jainam', () => {
    {
       cy.log('data found')
       // downloading Excel File
-      //cy.wait(5000) 
+     
       
        //Download Excel
-        cy.wait(30000)
+       cy.wait(120000)
        cy.get('.btn > .ng-star-inserted').click({ force: true })
         //cy.wait(3000)
- 
+    
     }
      else
     {
       cy.log('No data found')
-     }
+
+      }
    // Scrolling to top
     // cy.wait(2000)
      cy.scrollTo('top')

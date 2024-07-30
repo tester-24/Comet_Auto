@@ -3,7 +3,7 @@ const { defineConfig } = require("cypress");
 module.exports = defineConfig({
   //projectId: 'fr6xeg',
   //projectId: "7hxuzw",
-  projectId: "t83ycu",
+  projectId: "r2ai3b",
   reporter: 'cypress-mochawesome-reporter',
   video: true,
   reporterOptions: {
@@ -15,6 +15,7 @@ module.exports = defineConfig({
     inlineAssets: true,
     saveAllAttempts: true,
     screenshots: true,
+    experimentalMemoryManagement:true,
     //Cypress.config('defaultCommandTimeout', 10000);
     
   },
