@@ -5,7 +5,7 @@ const loginPage = new LoginPage
 
 it('Comet_Jainam', () => {
 cy.visit('https://comet.jainam.in/#/startup');
-//cy.wait(3000);
+cy.wait(3000);
 
 cy.get('.login-space-btn').click();
 loginPage.enterUsername();
@@ -16,7 +16,7 @@ loginPage.clickLogin();
 //Pin Page
 
 cy.get('.form_wrap').click();
-//cy.wait(2000);
+cy.wait(2000);
 
 // //Enter Pin
 // cy.wait(1000);
@@ -57,23 +57,24 @@ cy.get('[formcontrolname="otp4"]').type('4');
 // cy.wait(3000);
 
     // click on Reports
-    //cy.get('#ReportDropdown').click({ force: true })
-    //cy.get('[href="#/pnl"]').click()
-    //cy.wait(4000)
+    cy.get('#ReportDropdown').click({ force: true })
+    cy.get('[href="#/pnl"]').click()
+    cy.wait(4000)
 
-    // // 4) Global Report
-    // //cy.get('#ReportDropdown').click()
-    // cy.get('[href="#/pnl"]').click()
-    // cy.wait(3000)
+    // 4) Global Report
+    cy.get('#ReportDropdown').click()
+    cy.get('[href="#/pnl"]').click()
+    cy.wait(3000)
 
     //Selecting EQUITY
-    // cy.get('li[aria-selected="true"] span').click({ force: true })
-    // cy.wait(5000)
+   // cy.wait(4000)
+    cy.get('.container > form.ng-valid > :nth-child(2) > :nth-child(1)').click()
     
     //Click on DOWNLOAD BY 
+   // cy.wait(10000)
     cy.get(':nth-child(2) > .form-group').click()
         .type("{downArrow}{Enter}")
-    //cy.wait(3000)
+     //cy.wait(3000)
 
     //Select From Date - Calendar
 
@@ -85,7 +86,7 @@ cy.get('[formcontrolname="otp4"]').type('4');
     //Download Type
     cy.get(':nth-child(5) > .form-group').click()
         .type("{downArrow}{Enter}")
-    //cy.wait(2000)
+   // cy.wait(2000)
 
     // //Enter Code
    
@@ -98,6 +99,7 @@ cy.get('[formcontrolname="otp4"]').type('4');
 
 
     //Download 
+   // cy.wait(3000)
     cy.get('.col-lg-2 > .btn').click()
    // cy.wait(9000)
 

@@ -18,7 +18,7 @@ it('Comet_Jainam', () => {
    // cy.wait(2000)
  
   //Enter Pin
-  //cy.wait(1000);
+  cy.wait(1000);
   cy.get('[formcontrolname="otp1"]').type('1');
   cy.get('[formcontrolname="otp2"]').type('2');
   cy.get('[formcontrolname="otp3"]').type('3');
@@ -62,7 +62,7 @@ it('Comet_Jainam', () => {
         // downloading Excel File 
         
         //Download Excel
-          cy.wait(9000)
+          cy.wait(25000)
           cy.get('.btn > .ng-star-inserted').click()
           // cy.wait(3000)
    

@@ -298,7 +298,7 @@
   "scripts": {
     "test": "mocha"
   },
-  "author": "Juhi",
+  "author": "Saloni",
   "license": "ISC",
   "description": ""
 }

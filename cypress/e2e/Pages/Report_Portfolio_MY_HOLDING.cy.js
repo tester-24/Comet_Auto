@@ -118,7 +118,7 @@ it('Comet_Jainam', () => {
 
 
     //Enter Pin
-  //cy.wait(1000);
+  cy.wait(1000);
   cy.get('[formcontrolname="otp1"]').type('1');
   cy.get('[formcontrolname="otp2"]').type('2');
   cy.get('[formcontrolname="otp3"]').type('3');
@@ -156,7 +156,7 @@ it('Comet_Jainam', () => {
 
 
     // click on Reports
-   // cy.wait(2000)
+    cy.wait(4000)
     cy.get('#ReportDropdown').click({ force: true })
   })
    // cy.wait(1000);
@@ -192,11 +192,11 @@ it('Comet_Jainam', () => {
 
 
     //Click on My Holding
-    //cy.wait(2000)
+    cy.wait(2000)
     cy.get('span.k-input-value-text').eq(0)
     cy.get('span.k-input-inner span').eq(0)
     cy.get('kendo-dropdownlist[name="CategoryName"] span').eq(1)
-     //cy.wait(1000)
+     cy.wait(1000)
 
     //Click on Submit Button
 
@@ -224,7 +224,7 @@ it('Comet_Jainam', () => {
 
    // cy.wait(30000)
 
-    //cy.wait(3000)
+    cy.wait(3000)
     if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))
         {
           cy.log('data found')
@@ -238,7 +238,7 @@ it('Comet_Jainam', () => {
        // cy.wait(10000)
         
         //Click on Download File
-       // cy.wait(3000)
+        cy.wait(3000)
         cy.get('[title="Download Report"] > img').click({ force: true })
        // cy.wait(1000);
 
@@ -310,11 +310,11 @@ it('Comet_Jainam', () => {
 
     //Click on Download File
     cy.get('[title="Download Report"] > img').click()
-    //cy.wait(4000)
+    cy.wait(4000)
 
     //Click on Download Button
     cy.get('#DownloadModal > .modal-dialog > .modal-content > .modal-footer > :nth-child(1)').click()
-    //cy.wait(3000)
+    cy.wait(3000)
 
     //Click on CLOSE Button
     cy.get('#DownloadModal > .modal-dialog > .modal-content > .modal-header > .btn-close').click()

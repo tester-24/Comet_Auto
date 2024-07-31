@@ -5,7 +5,7 @@ const loginPage = new LoginPage
 
 it('Comet_Jainam', () => {
     cy.visit('https://comet.jainam.in/#/startup')
-   // cy.wait(3000)
+    cy.wait(3000)
     cy.get('.login-space-btn').click({ force: true })
 
     loginPage.enterUsername()
@@ -16,14 +16,14 @@ it('Comet_Jainam', () => {
     cy.get('.form_wrap').click()
     
     //Enter Pin
-   // cy.wait(3000);
+   cy.wait(3000);
     cy.get('[formcontrolname="otp1"]').type('1');
     cy.get('[formcontrolname="otp2"]').type('2');
     cy.get('[formcontrolname="otp3"]').type('3');
     cy.get('[formcontrolname="otp4"]').type('4');
     
     // click on Reports
-   // cy.wait(5000)
+   cy.wait(4000)
     cy.get('#ReportDropdown').click({force:true})
     cy.get('[href="#/tax"]').click()
     
@@ -37,7 +37,7 @@ it('Comet_Jainam', () => {
      
      //Click on view
      cy.get('.btn').click()
-     //cy.wait(8000)
+     cy.wait(12000)
      cy.get('i.fa-cloud-download').eq(0).click({ force: true })
    
 

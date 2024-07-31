@@ -26,8 +26,8 @@ module.exports = defineConfig({
 
     },
     experimentalMemoryManagement: true,
-    numTestsKeptInMemory:true,
-    defaultCommandTimeout:6000,
+    numTestsKeptInMemory:0,
+  
   },
 
 });
