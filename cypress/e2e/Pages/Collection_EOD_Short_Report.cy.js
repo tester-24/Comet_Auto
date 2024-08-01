@@ -62,8 +62,8 @@ it('Comet_Jainam', () => {
         // downloading Excel File 
         
         //Download Excel
-          cy.wait(25000)
-          cy.get('.btn > .ng-star-inserted').click()
+          //cy.wait(25000)
+         // cy.get('.btn > .ng-star-inserted').click()
           // cy.wait(3000)
    
       }

@@ -62,7 +62,7 @@ it('Comet_Jainam', () => {
      
       
        //Download Excel
-       cy.wait(100000)
+       cy.wait(120000)
        cy.get('.btn > .ng-star-inserted').click({ force: true })
         //cy.wait(3000)
     

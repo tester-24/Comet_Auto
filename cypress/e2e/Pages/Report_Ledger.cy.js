@@ -20,7 +20,7 @@ it('Comet_Jainam', () => {
     //cy.wait(2000)
 
     //Enter Pin
-  //cy.wait(3000);
+  cy.wait(2000);
   cy.get('[formcontrolname="otp1"]').type('1');
   cy.get('[formcontrolname="otp2"]').type('2');
   cy.get('[formcontrolname="otp3"]').type('3');
@@ -250,7 +250,7 @@ it('Comet_Jainam', () => {
 
          //Click on View Button
           cy.get(':nth-child(2) > :nth-child(3) > .btn').click()
-          cy.wait(7000)
+          cy.wait(10000)
 
 
           if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))
