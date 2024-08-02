@@ -57,14 +57,15 @@ cy.get('[formcontrolname="otp4"]').type('4');
 // cy.wait(3000);
 
     // click on Reports
+    cy.wait(4000)
     cy.get('#ReportDropdown').click({ force: true })
     cy.get('[href="#/pnl"]').click()
     cy.wait(4000)
 
-    // 4) Global Report
-    cy.get('#ReportDropdown').click()
-    cy.get('[href="#/pnl"]').click()
-    cy.wait(3000)
+    // // 4) Global Report
+    // cy.get('#ReportDropdown').click()
+    // cy.get('[href="#/pnl"]').click()
+    // cy.wait(3000)
 
     //Selecting EQUITY
    // cy.wait(4000)
@@ -99,7 +100,7 @@ cy.get('[formcontrolname="otp4"]').type('4');
 
 
     //Download 
-   // cy.wait(3000)
+    cy.wait(3000)
     cy.get('.col-lg-2 > .btn').click()
    // cy.wait(9000)
 

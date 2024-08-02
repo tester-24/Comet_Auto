@@ -72,7 +72,7 @@ it('Comet_Jainam', () => {
         cy.get('#excel').click({force:true})
         cy.get('.modal-footer > :nth-child(2)').click()
         cy.get('#pdf').click({force:true})
-        cy.get('.modal-footer > :nth-child(2)').click()
+        cy.get('.modal-footer > :nth-child(2)').click({force:true})
         cy.wait(5000)
 
 
@@ -277,7 +277,7 @@ it('Comet_Jainam', () => {
               cy.get('#excel').click({ force: true })
               cy.get('.modal-footer > :nth-child(2)').click()
               cy.get('#pdf').click({ force: true })
-              cy.get('.modal-footer > :nth-child(2)').click()
+              cy.get('.modal-footer > :nth-child(2)').click({force:true})
               cy.wait(5000)
       
       
