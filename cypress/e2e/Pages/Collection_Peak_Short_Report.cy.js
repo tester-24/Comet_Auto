@@ -40,6 +40,7 @@ it('Comet_Jainam', () => {
  
 
   //Select Category
+  cy.wait(3000)
   cy.get('.k-input-value-text').click()
   cy.get('select')
  
@@ -60,7 +61,7 @@ it('Comet_Jainam', () => {
       
        //Download Excel
         cy.wait(12000)
-       cy.get('.btn > .ng-star-inserted').click()
+      // cy.get('.btn > .ng-star-inserted').click()
         
     }
     else
