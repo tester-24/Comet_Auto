@@ -192,7 +192,7 @@ it('Comet_Jainam', () => {
 
 
     //Click on My Holding
-    cy.wait(2000)
+    cy.wait(3000)
     cy.get('span.k-input-value-text').eq(0)
     cy.get('span.k-input-inner span').eq(0)
     cy.get('kendo-dropdownlist[name="CategoryName"] span').eq(1)
