@@ -291,7 +291,7 @@ it('Comet_Jainam', () => {
 
 
     //Click on CLOSE Button
-    cy.get('#DownloadModal > .modal-dialog > .modal-content > .modal-header > .btn-close').click()
+    cy.get('#DownloadModal > .modal-dialog > .modal-content > .modal-header > .btn-close').click({force:true})
     //cy.wait(3000)
   
         }

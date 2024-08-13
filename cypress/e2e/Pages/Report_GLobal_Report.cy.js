@@ -15,8 +15,8 @@ loginPage.clickLogin();
 
 //Pin Page
 
-cy.get('.form_wrap').click();
-cy.wait(2000);
+// cy.get('.form_wrap').click();
+// cy.wait(2000);
 
 // //Enter Pin
 // cy.wait(1000);

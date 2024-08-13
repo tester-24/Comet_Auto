@@ -10,6 +10,6 @@ export class LoginPage {
     }
 
     clickLogin() {
-        cy.get('.login_button_wrap > p').click({ force: true });
+        cy.xpath("//p[normalize-space()='Login Now']").click({ force: true });
     }
 }
