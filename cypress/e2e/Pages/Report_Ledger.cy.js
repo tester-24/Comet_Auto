@@ -238,8 +238,8 @@ it('Comet_Jainam', () => {
           // FUTURE OPTION
 
                   //Selecting from SEGMENT - FUTURE_OPTION
-                cy.get('.container > form.ng-valid > :nth-child(2) > :nth-child(1)').click({ force: true })
-              .type("{downArrow}{Enter}")
+                cy.get('.container > form.ng-valid > :nth-child(2) > :nth-child(1)').click({force:true})
+              .type("{downArrow}{Enter},{force:true")
               cy.wait(4000)
 
 
