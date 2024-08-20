@@ -71,7 +71,8 @@ it('Comet_Jainam', () => {
       
       // Downloading Excel File
       cy.wait(12000) 
-      cy.get('.btn > .ng-star-inserted').click()
+     cy.get('.btn > .ng-star-inserted').click()
+      //cy.xpath('/html[1]/body[1]/app-root[1]/app-layout[1]/div[1]/app-collection[1]/div[4]/div[1]/div[1]/div[4]/button[1]/img[1]').click({force:true})
     
  
    }
