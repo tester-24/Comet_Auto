@@ -45,7 +45,7 @@ it('Comet_Jainam', () => {
      cy.wait(1800)
 
     cy.get('.mt-2 > .btn').click({ force: true })
-    cy.wait(30000)  
+    cy.wait(12000)  
 
     if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))
       {
@@ -239,7 +239,7 @@ it('Comet_Jainam', () => {
 
                   //Selecting from SEGMENT - FUTURE_OPTION
                 cy.get('.container > form.ng-valid > :nth-child(2) > :nth-child(1)').click({force:true})
-              .type("{downArrow}{Enter},{force:true}")
+              .type("{downArrow}{Enter}")
               cy.wait(4000)
 
 
