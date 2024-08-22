@@ -59,6 +59,7 @@ cy.get('[formcontrolname="otp4"]').type('4');
     // click on Reports
     cy.wait(4000)
     cy.get('#ReportDropdown').click({ force: true })
+    cy.wait(2000)
     cy.get('[href="#/pnl"]').click()
     cy.wait(4000)
 
@@ -68,11 +69,11 @@ cy.get('[formcontrolname="otp4"]').type('4');
     // cy.wait(3000)
 
     //Selecting EQUITY
-    cy.wait(2000)
+    //cy.wait(2000)
     cy.get('.container > form.ng-valid > :nth-child(2) > :nth-child(1)').click()
     
     //Click on DOWNLOAD BY 
-   // cy.wait(10000)
+   cy.wait(1000)
     cy.get(':nth-child(2) > .form-group').click()
         .type("{downArrow}{Enter}")
      //cy.wait(3000)

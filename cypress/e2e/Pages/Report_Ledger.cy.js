@@ -68,7 +68,7 @@ it('Comet_Jainam', () => {
         
 
         //Download - PDF/EXCEL
-        cy.get('.modal-footer > :nth-child(2)').click()
+        cy.get('.modal-footer > :nth-child(2)').click({force:true})
         cy.get('#excel').click({force:true})
         cy.get('.modal-footer > :nth-child(2)').click({force:true})
         cy.get('#pdf').click({force:true})
@@ -344,7 +344,7 @@ it('Comet_Jainam', () => {
           // CURRENCY
 
                   //Selecting from SEGMENT - FUTURE_OPTION
-                  cy.get('.container > form.ng-valid > :nth-child(2) > :nth-child(1)').click({force:true})
+                  cy.get('.container > form.ng-valid > :nth-child(2) > :nth-child(1)').click()
                   .type("{downArrow}{Enter}")
                   cy.wait(4000)
     

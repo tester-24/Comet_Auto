@@ -5,7 +5,7 @@ const loginPage = new LoginPage
 
 it('Comet_Jainam', () => {
     cy.visit('https://comet.jainam.in/#/startup')
-   // cy.wait(1000);
+   cy.wait(1000);
 
     cy.window().then((win) => {
         const startTime = performance.now(); // Capture start time
@@ -25,10 +25,10 @@ it('Comet_Jainam', () => {
             console.warn(`Home page load time exceeded threshold! (${loadTime}ms)`);
         }
   
-       })
-   // cy.wait(3000)
+      })
+    cy.wait(3000)
     cy.get('.login-space-btn').click({force:true})
-   // cy.wait(1000);
+   cy.wait(1000);
 
     cy.window().then((win) => {
         const startTime = performance.now(); // Capture start time
@@ -81,7 +81,7 @@ it('Comet_Jainam', () => {
 
     //Pin Page
     cy.get('.form_wrap').click()
-   // cy.wait(1000);
+   cy.wait(1000);
 
     cy.window().then((win) => {
         const startTime = performance.now(); // Capture start time
@@ -124,7 +124,7 @@ it('Comet_Jainam', () => {
   cy.get('[formcontrolname="otp3"]').type('3');
   cy.get('[formcontrolname="otp4"]').type('4');
 
-  //cy.wait(1000);
+  cy.wait(1000);
 
   cy.window().then((win) => {
       const startTime = performance.now(); // Capture start time
@@ -159,7 +159,7 @@ it('Comet_Jainam', () => {
     cy.wait(4000)
     cy.get('#ReportDropdown').click({ force: true })
   })
-   // cy.wait(1000);
+   cy.wait(1000);
 
     cy.window().then((win) => {
         const startTime = performance.now(); // Capture start time
@@ -240,7 +240,7 @@ it('Comet_Jainam', () => {
         //Click on Download File
         cy.wait(9000)
         cy.get('[title="Download Report"] > img').click({ force: true })
-       // cy.wait(1000);
+       cy.wait(1000);
 
         cy.window().then((win) => {
             const startTime = performance.now(); // Capture start time
@@ -354,4 +354,4 @@ it('Comet_Jainam', () => {
     // //    cy.scrollTo('top')
 
 
-})
+    })
