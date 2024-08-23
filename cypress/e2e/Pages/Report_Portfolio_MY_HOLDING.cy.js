@@ -80,8 +80,8 @@ it('Comet_Jainam', () => {
     //cy.wait(3000)
 
     //Pin Page
-    cy.get('.form_wrap').click()
-   cy.wait(1000);
+   // cy.get('.form_wrap').click()
+   cy.wait(2000);
 
     cy.window().then((win) => {
         const startTime = performance.now(); // Capture start time
