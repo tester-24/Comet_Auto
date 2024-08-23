@@ -14,7 +14,7 @@ it('Comet_Jainam', () => {
     //cy.wait(3000)
 
     //Pin Page
-    cy.get('.form_wrap').click()
+    //cy.get('.form_wrap').click()
    // cy.wait(2000)
  
   //Enter Pin

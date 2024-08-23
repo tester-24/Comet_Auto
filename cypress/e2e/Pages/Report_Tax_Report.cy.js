@@ -13,7 +13,7 @@ it('Comet_Jainam', () => {
     loginPage.clickLogin()
   
      //Pin Page
-    cy.get('.form_wrap').click()
+   // cy.get('.form_wrap').click()
     
     //Enter Pin
    cy.wait(3000);
