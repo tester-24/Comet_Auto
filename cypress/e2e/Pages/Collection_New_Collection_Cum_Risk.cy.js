@@ -15,7 +15,7 @@ it('Comet_Jainam', () => {
     
 
     //Pin Page    
-    cy.get('.form_wrap').click()
+    //cy.get('.form_wrap').click()
    
  
   //Enter Pin

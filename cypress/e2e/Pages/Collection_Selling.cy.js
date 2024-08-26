@@ -16,7 +16,7 @@ it('Comet_Jainam', () => {
     //cy.get('.form_wrap').click()
    
   //Enter Pin
-  
+  cy.wait(2000)
   cy.get('[formcontrolname="otp1"]').type('1');
   cy.get('[formcontrolname="otp2"]').type('2');
   cy.get('[formcontrolname="otp3"]').type('3');
