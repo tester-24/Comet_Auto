@@ -1,28 +1,25 @@
-pipelinel{
-        agent any
-parameters{
+pipeline {
+    agent any
 
+    triggers {
+        cron('H 2 * * *')  // Runs daily at 2 AM
+    }
 
-string (name:'SPEC', defaultValue: "cypress/integration/**/**", description: "")
-choice(name: 'BROWSER', choices: ['chrome', 'edge', 'firefox'], description: "")
-}
-options{
-ansiColor ( 'xterm')
-}
-stages{
-stage( 'Deploying'){
-echo "Building the application"
-}
-stage( 'Testing'){
-       steps{
-             bat"npn i"
-             bat "npx cypress run --browser=$ (BROWSER} -- spec ${SPEC}"
-       }
-
-}
-stage('Deploying'){
-echo "Deploy the application "
-}
-
-}
+    stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/your-repository.git'
+            }
+        }
+        stage('Install Dependencies') {
+            steps {
+                sh 'npm install'
+            }
+        }
+        stage('Run Cypress Tests') {
+            steps {
+                sh 'npx cypress run'
+            }
+        }
+    }
 }
