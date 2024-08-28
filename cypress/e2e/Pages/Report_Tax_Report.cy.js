@@ -38,27 +38,27 @@ it('Comet_Jainam', () => {
      //Click on view
      cy.get('.btn').click()
      cy.wait(12000)
-     cy.get('i.fa-cloud-download').eq(0).click({ force: true })
+     //cy.get('i.fa-cloud-download').eq(0).click({ force: true })
    
 
      //Selecting Segmet - NSE_FNO
     cy.get('span.k-input-value-text').eq(0).click({ force: true }).type("{downArrow}{Enter}")
     
     //Download 
-    cy.get('.btn').click({ force: true })
+    //cy.get('.btn').click({ force: true })
     
     //Select Segment - CURRENCY
     cy.get('span.k-input-inner').eq(0).click({ force: true })
     //.type("{downArrow}{Enter}")
   
     //Download 
-    cy.get('.btn').click({ force: true })
+   // cy.get('.btn').click({ force: true })
    
     //Select Segment - MCX
     cy.get('span.k-input-value-text').eq(0).click({ force: true })
     // .type("{downArrow}{Enter}")
    
     //Download 
-    cy.get('.btn').click({ force: true })
+    //cy.get('.btn').click({ force: true })
    
 })

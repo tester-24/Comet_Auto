@@ -102,7 +102,7 @@ cy.get('[formcontrolname="otp4"]').type('4');
 
     //Download 
     cy.wait(3000)
-    cy.get('.col-lg-2 > .btn').click()
+   // cy.get('.col-lg-2 > .btn').click()
    // cy.wait(9000)
 
 

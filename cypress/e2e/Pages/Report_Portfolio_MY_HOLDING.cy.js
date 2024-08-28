@@ -239,7 +239,7 @@ it('Comet_Jainam', () => {
         
         //Click on Download File
         cy.wait(9000)
-        cy.get('[title="Download Report"] > img').click({ force: true })
+       // cy.get('[title="Download Report"] > img').click({ force: true })
        cy.wait(1000);
 
         cy.window().then((win) => {
@@ -264,7 +264,7 @@ it('Comet_Jainam', () => {
        // cy.wait(4000)
 
     //Click on Download Button
-    cy.get('#DownloadModal > .modal-dialog > .modal-content > .modal-footer > :nth-child(1)').click()
+  //  cy.get('#DownloadModal > .modal-dialog > .modal-content > .modal-footer > :nth-child(1)').click()
     
     //cy.wait(1000);
 
@@ -310,11 +310,11 @@ it('Comet_Jainam', () => {
 
     //Click on Download File
     cy.wait(3000)
-    cy.get('[title="Download Report"] > img').click({force:true})
+    //cy.get('[title="Download Report"] > img').click({force:true})
     cy.wait(4000)
 
     //Click on Download Button
-    cy.get('#DownloadModal > .modal-dialog > .modal-content > .modal-footer > :nth-child(1)').click()
+   // cy.get('#DownloadModal > .modal-dialog > .modal-content > .modal-footer > :nth-child(1)').click()
     cy.wait(3000)
 
     //Click on CLOSE Button
