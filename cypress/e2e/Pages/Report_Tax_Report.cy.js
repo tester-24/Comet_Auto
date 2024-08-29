@@ -42,6 +42,7 @@ it('Comet_Jainam', () => {
    
 
      //Selecting Segmet - NSE_FNO
+     //cy.wait(1000)
     cy.get('span.k-input-value-text').eq(0).click({ force: true }).type("{downArrow}{Enter}")
     
     //Download 

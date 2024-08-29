@@ -290,18 +290,26 @@
     "yocto-queue": "^0.1.0"
   },
   "devDependencies": {
-    "cypress": "^13.13.1",
+    "cypress": "^13.14.0",
     "cypress-wait-until": "^3.0.2",
     "cypress-xpath": "^2.0.1",
-    "mocha": "^10.3.0"
+    "mocha": "^10.3.0",
+    "multiple-cucumber-html-reporter": "^3.7.0"
   },
   "scripts": {
-   "test":"node_modules\\.bin\\cypress run",
+    "test": "node_modules\\.bin\\cypress run",
     "headedTest": "npm run test -- headed",
-    "chromeTest" :"npm run test -- --browser chrome",
+    "chromeTest": "npm run test -- --browser chrome",
     "recordDashboardTest": "npm run test -- --record --key f8699bd4-bab1-48b3-841a-9d7037d8953b --reporter mochawesome",
-    "mochReportDashboard": "npm run test -- --record --key f8699bd4-bab1-48b3-841a-9d7037d8953b --reporter cypress-mochawesome"
+    "mochReportDashboard": "npm run test -- --record --key f8699bd4-bab1-48b3-841a-9d7037d8953b --reporter cypress-mochawesome",
+    "run-tests": "npx cypress run --headed --browser chrome --spec cypress\\e2e\\**\\*",
+    "generate-multi-cucumber-html-report":"node\\cucumber-html-report.js"
   },
+  "cypress-cucumber-preprocessor": {
+  "cucumberJson": {
+   "generate": true
+  }
+},
   "author": "Saloni",
   "license": "ISC",
   "description": ""

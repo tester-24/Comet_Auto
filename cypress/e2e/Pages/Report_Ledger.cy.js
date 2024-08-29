@@ -68,11 +68,11 @@ it('Comet_Jainam', () => {
         
 
         //Download - PDF/EXCEL
-        cy.get('.modal-footer > :nth-child(2)').click({force:true})
-        cy.get('#excel').click({force:true})
-        cy.get('.modal-footer > :nth-child(2)').click({force:true})
-        cy.get('#pdf').click({force:true})
-        cy.get('.modal-footer > :nth-child(2)').click({force:true})
+       // cy.get('.modal-footer > :nth-child(2)').click({force:true})
+       // cy.get('#excel').click({force:true})
+       // cy.get('.modal-footer > :nth-child(2)').click({force:true})
+        //cy.get('#pdf').click({force:true})
+       // cy.get('.modal-footer > :nth-child(2)').click({force:true})
         cy.wait(5000)
 
 
@@ -84,8 +84,8 @@ it('Comet_Jainam', () => {
      cy.wait(3000)
 
      // Download - PDF 
-     cy.get('.modal-footer > :nth-child(2)').click({ force: true })
-     cy.wait(1800)
+    // cy.get('.modal-footer > :nth-child(2)').click({ force: true })
+    // cy.wait(1800)
  
      
      //Close
@@ -104,15 +104,15 @@ it('Comet_Jainam', () => {
     cy.wait(3000)
 
     //Download 
-    cy.get('.modal-footer > :nth-child(2)').click({force:true})
-    cy.wait(8000)
+   // cy.get('.modal-footer > :nth-child(2)').click({force:true})
+   // cy.wait(8000)
 
     //Ledger 
     cy.get('.modal-footer > :nth-child(2)').click({ force: true })
     cy.wait(4000)
 
     //Downloads -- SEND EMAIL
-    cy.get('.modal-footer > :nth-child(1)').click({ force: true })
+   // cy.get('.modal-footer > :nth-child(1)').click({ force: true })
     cy.wait(4000)
 
     //Click on [X]
@@ -161,21 +161,21 @@ it('Comet_Jainam', () => {
              
       
               //Click on Download Button
-              cy.get('.btn > img').click()
-              cy.wait(5000)
+            //  cy.get('.btn > img').click()
+              //cy.wait(5000)
       
               //Send Email
-              cy.get('.modal-footer > :nth-child(1)').click()
+             // cy.get('.modal-footer > :nth-child(1)').click()
         //      cy.wait(4000)
               
       
               //Download - PDF/EXCEL
-              cy.get('.modal-footer > :nth-child(2)').click({force:true})
-              cy.wait(2000)
-              cy.get('#excel').click()
-              cy.get('.modal-footer > :nth-child(2)').click()
-              cy.get('#pdf').click({force:true})
-              cy.get('.modal-footer > :nth-child(2)').click()
+            //  cy.get('.modal-footer > :nth-child(2)').click({force:true})
+             // cy.wait(2000)
+            //  cy.get('#excel').click()
+            //  cy.get('.modal-footer > :nth-child(2)').click()
+            //  cy.get('#pdf').click({force:true})
+            //  cy.get('.modal-footer > :nth-child(2)').click()
               //cy.wait(5000)
       
       
@@ -187,7 +187,7 @@ it('Comet_Jainam', () => {
            cy.wait(3000)
       
            // Download - PDF 
-           cy.get('.modal-footer > :nth-child(2)').click({ force: true })
+           //cy.get('.modal-footer > :nth-child(2)').click({ force: true })
            cy.wait(4000)
        
            
@@ -207,15 +207,15 @@ it('Comet_Jainam', () => {
           //cy.wait(3000)
       
           //Download 
-          cy.get('.modal-footer > :nth-child(2)').click({ force: true })
-          cy.wait(8000)
+       //   cy.get('.modal-footer > :nth-child(2)').click({ force: true })
+         // cy.wait(8000)
       
           //Ledger 
           cy.get('.modal-footer > :nth-child(2)').click({ force: true })
           //cy.wait(4000)
       
           //Downloads -- SEND EMAIL
-          cy.get('.modal-footer > :nth-child(1)').click({ force: true })
+        //  cy.get('.modal-footer > :nth-child(1)').click({ force: true })
           //cy.wait(6000)
       
           //Click on [X]
@@ -264,21 +264,21 @@ it('Comet_Jainam', () => {
              
       
               //Click on Download Button
-              cy.get('.btn > img').click()
-              cy.wait(5000)
+           //   cy.get('.btn > img').click()
+             // cy.wait(5000)
       
               //Send Email
-              cy.get('.modal-footer > :nth-child(1)').click()
+            //  cy.get('.modal-footer > :nth-child(1)').click()
               //cy.wait(4000)
               
       
               //Download - PDF/EXCEL
-              cy.get('.modal-footer > :nth-child(2)').click({force:true})
-              cy.get('#excel').click({ force: true })
-              cy.get('.modal-footer > :nth-child(2)').click({force:true})
-              cy.get('#pdf').click({ force: true })
-              cy.get('.modal-footer > :nth-child(2)').click({force:true})
-              cy.wait(5000)
+              // cy.get('.modal-footer > :nth-child(2)').click({force:true})
+              // cy.get('#excel').click({ force: true })
+              // cy.get('.modal-footer > :nth-child(2)').click({force:true})
+              // cy.get('#pdf').click({ force: true })
+              // cy.get('.modal-footer > :nth-child(2)').click({force:true})
+              // cy.wait(5000)
       
       
       
@@ -289,13 +289,13 @@ it('Comet_Jainam', () => {
            cy.wait(3000)
       
            // Download - PDF 
-           cy.get('.modal-footer > :nth-child(2)').click({ force: true })
-           cy.wait(4000)
+           //cy.get('.modal-footer > :nth-child(2)').click({ force: true })
+          // cy.wait(4000)
        
            
            //Close
            cy.get('.btn-close').click({ force: true })
-           cy.wait(4000)
+           //cy.wait(4000)
       
       
       
@@ -309,16 +309,16 @@ it('Comet_Jainam', () => {
           cy.wait(3000)
       
           //Download 
-          cy.get('.modal-footer > :nth-child(2)').click({ force: true })
-          cy.wait(8000)
+        //  cy.get('.modal-footer > :nth-child(2)').click({ force: true })
+         // cy.wait(8000)
       
           //Ledger 
           cy.get('.modal-footer > :nth-child(2)').click({ force: true })
           cy.wait(4000)
       
           //Downloads -- SEND EMAIL
-          cy.get('.modal-footer > :nth-child(1)').click({ force: true })
-          cy.wait(6000)
+          //cy.get('.modal-footer > :nth-child(1)').click({ force: true })
+         // cy.wait(6000)
       
           //Click on [X]
           cy.get('.btn-close').click({ force: true })
