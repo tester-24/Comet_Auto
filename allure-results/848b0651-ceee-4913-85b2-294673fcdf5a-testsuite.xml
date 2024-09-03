@@ -1,0 +1,15 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1725277277627' stop='1725277415689'>
+    <name></name>
+    <title></title>
+    <test-cases>
+        <test-case start='1725277277630' status='passed' stop='1725277415688'>
+            <name>Comet_Jainam</name>
+            <title>Comet_Jainam</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

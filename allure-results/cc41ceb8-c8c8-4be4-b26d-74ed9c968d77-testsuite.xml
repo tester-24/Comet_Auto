@@ -1,0 +1,20 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1725277450198' stop='1725277597520'>
+    <name></name>
+    <title></title>
+    <test-cases>
+        <test-case start='1725277450207' status='failed' stop='1725277597455'>
+            <name>Comet_Jainam</name>
+            <title>Comet_Jainam</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Timed out retrying after 4000ms: Expected to find element: `table[class='k-grid-table k-table k-table-md']>tbody>tr`, but never found it.</message>
+                <stack-trace>AssertionError: Timed out retrying after 4000ms: Expected to find element: `table[class='k-grid-table k-table k-table-md']>tbody>tr`, but never found it.
+                    at Context.eval (webpack://comet_automation_testing/./cypress/e2e/Pages/Report_Ledger.cy.js:256:79)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

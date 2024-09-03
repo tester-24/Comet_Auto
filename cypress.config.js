@@ -1,4 +1,13 @@
 const { defineConfig } = require("cypress");
+const { allureCypress } = require("allure-cypress/reporter");
+
+module.exports = defineConfig({
+  e2e: {
+    setupNodeEvents(on, config) {
+      allureCypress(on)
+    },
+  },
+});
 
 module.exports = defineConfig({
   //projectId: 'fr6xeg',
@@ -20,6 +29,7 @@ module.exports = defineConfig({
     //Cypress.config('defaultCommandTimeout', 10000);
     
   },
+  
   e2e: {
     setupNodeEvents(on, config) {
       require('cypress-mochawesome-reporter/plugin')(on);

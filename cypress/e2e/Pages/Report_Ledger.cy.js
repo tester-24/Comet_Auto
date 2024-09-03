@@ -342,9 +342,10 @@ it('Comet_Jainam', () => {
 
             
           // CURRENCY
+          // CURRENCY
 
                   //Selecting from SEGMENT - FUTURE_OPTION
-                  cy.get('.container > form.ng-valid > :nth-child(2) > :nth-child(1)').click()
+                  cy.get('.container > form.ng-valid > :nth-child(2) > :nth-child(1)').click({force:true})
                   .type("{downArrow}{Enter}")
                   cy.wait(4000)
     
