@@ -223,6 +223,7 @@ it('Comet_Jainam', () => {
 
 
    cy.wait(5000)
+   cy.scrollTo('center')
 
    // cy.wait(3000)
     if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))

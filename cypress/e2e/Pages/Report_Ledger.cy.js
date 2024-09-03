@@ -58,13 +58,13 @@ it('Comet_Jainam', () => {
        
 
         //Click on Download Button
-        cy.wait(4000)
+       // cy.wait(4000)
         //cy.get('.btn > img').click()
        // cy.wait(5000)
 
         //Send Email
        // cy.get('.modal-footer > :nth-child(1)').click()
-        cy.wait(4000)
+       // cy.wait(4000)
         
 
         //Download - PDF/EXCEL
@@ -199,7 +199,7 @@ it('Comet_Jainam', () => {
       
            //EMAILS
           // Click on Contract Bills 
-          cy.get('.btn > img').click({ force: true })
+         // cy.get('.btn > img').click({ force: true })
           cy.wait(4000)
       
           //Bills 
@@ -238,7 +238,7 @@ it('Comet_Jainam', () => {
           // FUTURE OPTION
 
                   //Selecting from SEGMENT - FUTURE_OPTION
-                cy.get('.container > form.ng-valid > :nth-child(2) > :nth-child(1)').click({force:true})
+                cy.get('.container > form.ng-valid > :nth-child(2) > :nth-child(1)').click()
               .type("{downArrow}{Enter}")
               cy.wait(4000)
 
