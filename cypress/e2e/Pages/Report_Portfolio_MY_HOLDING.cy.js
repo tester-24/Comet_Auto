@@ -222,12 +222,12 @@ it('Comet_Jainam', () => {
     })
 
 
-   // cy.wait(30000)
+   cy.wait(5000)
 
    // cy.wait(3000)
-    //if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))
+    if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))
         {
-        //  cy.log('data found')
+          cy.log('data found')
           // downloading Excel File 
           
         //   cy.get('[src="../../../../assets/image/icon/excel.png"]').click()
