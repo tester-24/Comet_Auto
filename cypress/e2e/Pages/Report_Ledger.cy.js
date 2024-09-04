@@ -80,7 +80,7 @@ it('Comet_Jainam', () => {
 
         //Contract Bills
 
-     cy.get('#bills').click({ force: true })
+    // cy.get('#bills').click({ force: true })
      cy.wait(3000)
 
      // Download - PDF 
@@ -89,35 +89,35 @@ it('Comet_Jainam', () => {
  
      
      //Close
-     cy.get('.btn-close').click({ force: true })
-     cy.wait(4000)
+   //  cy.get('.btn-close').click({ force: true })
+    // cy.wait(4000)
 
 
 
      //EMAILS
       // Click on Contract Bills 
-    cy.get('.btn > img').click({ force: true })
-    cy.wait(4000)
+   // cy.get('.btn > img').click({ force: true })
+   // cy.wait(4000)
 
     //Bills 
-    cy.get('#bills').click({force:true})
-    cy.wait(3000)
+  //  cy.get('#bills').click({force:true})
+   // cy.wait(3000)
 
     //Download 
    // cy.get('.modal-footer > :nth-child(2)').click({force:true})
    // cy.wait(8000)
 
     //Ledger 
-    cy.get('.modal-footer > :nth-child(2)').click({ force: true })
-    cy.wait(4000)
+   // cy.get('.modal-footer > :nth-child(2)').click({ force: true })
+   // cy.wait(4000)
 
     //Downloads -- SEND EMAIL
    // cy.get('.modal-footer > :nth-child(1)').click({ force: true })
-    cy.wait(4000)
+    //cy.wait(4000)
 
     //Click on [X]
-    cy.get('.btn-close').click({ force: true })
-    cy.wait(4000)
+   // cy.get('.btn-close').click({ force: true })
+   // cy.wait(4000)
 
 
 
@@ -183,16 +183,16 @@ it('Comet_Jainam', () => {
       
               //Contract Bills
       
-           cy.get('#bills').click({ force: true })
-           cy.wait(3000)
+          // cy.get('#bills').click({ force: true })
+          // cy.wait(3000)
       
            // Download - PDF 
            //cy.get('.modal-footer > :nth-child(2)').click({ force: true })
-           cy.wait(4000)
+          // cy.wait(4000)
        
            
            //Close
-           cy.get('.btn-close').click({ force: true })
+          // cy.get('.btn-close').click({ force: true })
            //cy.wait(4000)
       
       
@@ -200,10 +200,10 @@ it('Comet_Jainam', () => {
            //EMAILS
           // Click on Contract Bills 
          // cy.get('.btn > img').click({ force: true })
-          cy.wait(4000)
+         // cy.wait(4000)
       
           //Bills 
-          cy.get('#bills').click({ force: true })
+         // cy.get('#bills').click({ force: true })
           //cy.wait(3000)
       
           //Download 
@@ -211,7 +211,7 @@ it('Comet_Jainam', () => {
          // cy.wait(8000)
       
           //Ledger 
-          cy.get('.modal-footer > :nth-child(2)').click({ force: true })
+         // cy.get('.modal-footer > :nth-child(2)').click({ force: true })
           //cy.wait(4000)
       
           //Downloads -- SEND EMAIL
@@ -219,8 +219,8 @@ it('Comet_Jainam', () => {
           //cy.wait(6000)
       
           //Click on [X]
-          cy.get('.btn-close').click({ force: true })
-          cy.wait(4000)
+         // cy.get('.btn-close').click({ force: true })
+         // cy.wait(4000)
       
       
       
@@ -285,8 +285,8 @@ it('Comet_Jainam', () => {
       
               //Contract Bills
       
-           cy.get('#bills').click({ force: true })
-           cy.wait(3000)
+         //  cy.get('#bills').click({ force: true })
+          // cy.wait(3000)
       
            // Download - PDF 
            //cy.get('.modal-footer > :nth-child(2)').click({ force: true })
@@ -294,35 +294,35 @@ it('Comet_Jainam', () => {
        
            
            //Close
-           cy.get('.btn-close').click({ force: true })
+          // cy.get('.btn-close').click({ force: true })
            //cy.wait(4000)
       
       
       
            //EMAILS
           // Click on Contract Bills 
-          cy.get('.btn > img').click({ force: true })
-          cy.wait(4000)
+         // cy.get('.btn > img').click({ force: true })
+         // cy.wait(4000)
       
           //Bills 
-          cy.get('#bills').click({ force: true })
-          cy.wait(3000)
+         // cy.get('#bills').click({ force: true })
+         // cy.wait(3000)
       
           //Download 
         //  cy.get('.modal-footer > :nth-child(2)').click({ force: true })
          // cy.wait(8000)
       
           //Ledger 
-          cy.get('.modal-footer > :nth-child(2)').click({ force: true })
-          cy.wait(4000)
+         // cy.get('.modal-footer > :nth-child(2)').click({ force: true })
+         // cy.wait(4000)
       
           //Downloads -- SEND EMAIL
           //cy.get('.modal-footer > :nth-child(1)').click({ force: true })
          // cy.wait(6000)
       
           //Click on [X]
-          cy.get('.btn-close').click({ force: true })
-          cy.wait(4000)
+         // cy.get('.btn-close').click({ force: true })
+         // cy.wait(4000)
       
       
       
@@ -357,7 +357,7 @@ it('Comet_Jainam', () => {
               cy.wait(2000)
              //Click on View Button
               cy.get(':nth-child(2) > :nth-child(3) > .btn').click()
-             // cy.wait(10000)
+              cy.wait(5000)
     
     
               // if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))
