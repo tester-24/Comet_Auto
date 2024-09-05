@@ -73,7 +73,7 @@ it('Comet_Jainam', () => {
        // cy.get('.modal-footer > :nth-child(2)').click({force:true})
         //cy.get('#pdf').click({force:true})
        // cy.get('.modal-footer > :nth-child(2)').click({force:true})
-        cy.wait(5000)
+       // cy.wait(5000)
 
 
 
@@ -81,7 +81,7 @@ it('Comet_Jainam', () => {
         //Contract Bills
 
     // cy.get('#bills').click({ force: true })
-     cy.wait(3000)
+    // cy.wait(3000)
 
      // Download - PDF 
     // cy.get('.modal-footer > :nth-child(2)').click({ force: true })
@@ -360,14 +360,14 @@ it('Comet_Jainam', () => {
               cy.wait(5000)
     
     
-              // if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))
-              //   {
-              //     cy.log('data found')
+              if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))
+                 {
+                   cy.log('data found')
               //     // downloading Excel File 
                   
               //     // Scrolling to top
-              //     cy.wait(2000)
-              //     cy.scrollTo('top')
+                   cy.wait(2000)
+                   cy.scrollTo('top')
                  
           
               //     //Click on Download Button
@@ -437,11 +437,11 @@ it('Comet_Jainam', () => {
               //    cy.wait(2000)
               //   cy.scrollTo('top')
           
-              //   }
-              //   else
-              //   {
-              //     cy.log('No data found')
-              //   }
+                 }
+                 else
+                {
+                  cy.log('No data found')
+                 }
     
     
 
