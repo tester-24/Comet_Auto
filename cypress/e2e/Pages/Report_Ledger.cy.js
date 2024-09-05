@@ -54,7 +54,7 @@ it('Comet_Jainam', () => {
         
         // Scrolling to top
         //cy.wait(2000)
-        cy.scrollTo('top')
+       // cy.scrollTo('top')
        
 
         //Click on Download Button
@@ -250,7 +250,7 @@ it('Comet_Jainam', () => {
 
          //Click on View Button
           cy.get(':nth-child(2) > :nth-child(3) > .btn').click()
-          cy.wait(10000)
+          cy.wait(15000)
 
 
           if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))
@@ -357,7 +357,7 @@ it('Comet_Jainam', () => {
               cy.wait(2000)
              //Click on View Button
               cy.get(':nth-child(2) > :nth-child(3) > .btn').click()
-              cy.wait(5000)
+              cy.wait(8000)
     
     
               if(cy.get("table[class='k-grid-table k-table k-table-md']>tbody>tr").should('have.length.greaterThan',0))
