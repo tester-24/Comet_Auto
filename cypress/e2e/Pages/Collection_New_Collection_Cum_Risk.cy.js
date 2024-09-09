@@ -6,7 +6,6 @@ const loginPage = new LoginPage
 
 it('Comet_Jainam', () => {
     cy.visit('https://comet.jainam.in/#/startup')
-    cy.wait(3000)
     cy.get('.login-space-btn').click()
 
     loginPage.enterUsername()
