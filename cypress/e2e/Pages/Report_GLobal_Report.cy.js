@@ -70,7 +70,7 @@ cy.get('[formcontrolname="otp4"]').type('4');
 
     //Selecting EQUITY
     //cy.wait(2000)
-    cy.get('.container > form.ng-valid > :nth-child(2) > :nth-child(1)').click()
+    cy.get('.container > form.ng-valid > :nth-child(2) > :nth-child(1)').click({force:true})
     
     //Click on DOWNLOAD BY 
    cy.wait(1000)
