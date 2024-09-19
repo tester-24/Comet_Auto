@@ -25,7 +25,7 @@ it('Comet_Jainam', () => {
     // click on Reports
    cy.wait(4000)
     cy.get('#ReportDropdown').click({force:true})
-    cy.get('[href="#/tax"]').click()
+    cy.get('[href="#/tax"]').click({force:true})
     
     // 5) Tax P&L - Selecting - Equity
     cy.get('#ReportDropdown').click()
