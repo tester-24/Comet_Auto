@@ -32,8 +32,7 @@ it('Comet_Jainam', () => {
     cy.get('[href="#/tax"]').click()
      
     //Select FY Year
-     cy.get('span.k-input-value-text').eq(1).click({ force: true })
-     .type("{downArrow}{Enter}")
+     cy.get('span.k-input-value-text').eq(1).click({ force: true }).type("{downArrow}{Enter}")
      
      //Click on view
      cy.get('.btn').click()
